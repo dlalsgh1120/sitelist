@@ -1,0 +1,12 @@
+[
+	{"id": 1, "name": "Look11", "desc":"룩 확인하기", "src":"what_nav_look01.jpg"},
+	{"id": 2, "name": "Look18", "desc":"룩 확인하기", "src":"what_nav_look02.jpg"},
+	{"id": 3, "name": "Look23", "desc":"룩 확인하기", "src":"what_nav_look03.jpg"},
+	{"id": 4, "name": "Look24", "desc":"룩 확인하기", "src":"what_nav_look04.jpg"},
+	{"id": 5, "name": "Look25", "desc":"룩 확인하기", "src":"what_nav_look05.jpg"},
+	{"id": 6, "name": "Look46", "desc":"룩 확인하기", "src":"what_nav_look06.jpg"},
+	{"id": 7, "name": "Look67", "desc":"룩 확인하기", "src":"what_nav_look07.jpg"},
+	{"id": 8, "name": "Look78", "desc":"룩 확인하기", "src":"what_nav_look08.jpg"},
+	{"id": 9, "name": "Look105", "desc":"룩 확인하기", "src":"what_nav_look09.jpg"},
+	{"id": 10, "name": "Look106", "desc":"룩 확인하기", "src":"what_nav_look010.jpg"}
+]
