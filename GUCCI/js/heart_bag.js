@@ -53,7 +53,8 @@ $(document).ready(function(){
     var url = window.location.search.substring(1);
     var split = url.split('=');
     var haertStr = split[1];
-    var like_icon = haertStr.split(',');
+    console.log(haertStr);
+    // var like_icon = haertStr.split(',');
     var heartList;
 
 
