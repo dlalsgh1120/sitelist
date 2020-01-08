@@ -60,7 +60,7 @@ $(document).ready(function(){
         });
 
         $('#lookImg').attr('src', 'img/'+item[0].src);
-        $('#name').html(item[0].name);
+        $('#lable_name').html(item[0].name);
 
         $(document).on('click','#front', function(){
             $('#lookImg').attr('src', 'img/'+item[0].src);
@@ -70,22 +70,67 @@ $(document).ready(function(){
         });
     };
 
+    var html = "";
+    var txt = "";
+    var id, name, src;
     var index = 0;
-    var length = $('#lookImg').length;
-    var on = false;
-    $(document).on('click', '.left_btn', function(){
-        index = index % length;
-        // $('#lookImg').eq(index).attr('src', 'img/'+item[0].src);
-        $('#name').html(item[0].name);
-
+    var length = secBox.length;
+    var timer;
+    getImgs();
+    setLable(index);
+    $('.itemImg').eq(0).css('left', '0%');
+    $(document).on('click', '#left_btn', function(){
+        prev();
     });
-    $(document).on('click', '.right_btn', function(){
+    $(document).on('click', '#right_btn', function(){
+        next();
+    });
+    function getImgs(){
+        html = "";
+        for(var i in secBox){
+            txt = `
+                <div class= "itemImg">
+                    <img src="img/"${secBox[i].src}">
+                </div>
+            `;
+            html = html + txt;
+        }
+        $('.wear_look_left').html(html);
+    }
+    function setLable(_idx){
+        var lable = secBox[_idx].name;
+        $('#lable_name').html(lable);
+    }
+    function next(){
+        $('.itemImg').eq(index).animate({
+            left: "-100%"
+        }, timer);
+        index++;
+        index = index%length;
+        setLable(index);
+
+        $('.itemImg').eq(index).css({
+            left: "100%"
+        }). animate({
+            left: "0%"
+        }, timer);
+    }
+    function prev(){
+        $('.itemImg').eq(index).animate({
+            left: '100%'
+        }, timer);
+
         index--;
-        if(index === -1){
+        if (index < 0) {
             index = length - 1;
         }
-        // $('#lookImg').eq(index).attr('src', 'img/'+item[0].src);
-        $('#name').html(item[0].name);
+        setLable(index);
 
-    });
+		$('.itemImg').eq(index).css({
+			left: '-100%'
+		}).animate({
+			left: '0%'
+		}, timer);
+    }
+    
 });
