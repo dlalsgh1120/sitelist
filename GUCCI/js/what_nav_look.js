@@ -38,19 +38,19 @@ $(document).ready(function(){
     };
 
     var secBox = [
-        {id: 1, name: "Look11", desc:"룩 확인하기", src:"what_nav_look01.jpg"},
-        {id: 2, name: "Look18", desc:"룩 확인하기", src:"what_nav_look02.jpg"},
-        {id: 3, name: "Look23", desc:"룩 확인하기", src:"what_nav_look03.jpg"},
-        {id: 4, name: "Look24", desc:"룩 확인하기", src:"what_nav_look04.jpg"},
-        {id: 5, name: "Look25", desc:"룩 확인하기", src:"what_nav_look05.jpg"},
-        {id: 6, name: "Look46", desc:"룩 확인하기", src:"what_nav_look06.jpg"},
-        {id: 7, name: "Look67", desc:"룩 확인하기", src:"what_nav_look07.jpg"},
-        {id: 8, name: "Look78", desc:"룩 확인하기", src:"what_nav_look08.jpg"},
-        {id: 9, name: "Look105", desc:"룩 확인하기", src:"what_nav_look09.jpg"},
-        {id: 10, name: "Look106", desc:"룩 확인하기", src:"what_nav_look010.jpg"}
+        {id: 1, name: "Look11", desc:"룩 확인하기", src:"what_nav_look01.jpg", src2:"what_nav_look01_hover.jpg"},
+        {id: 2, name: "Look18", desc:"룩 확인하기", src:"what_nav_look02.jpg", src2:"what_nav_look02_hover.jpg"},
+        {id: 3, name: "Look23", desc:"룩 확인하기", src:"what_nav_look03.jpg", src2:"what_nav_look03_hover.jpg"},
+        {id: 4, name: "Look24", desc:"룩 확인하기", src:"what_nav_look04.jpg", src2:"what_nav_look04_hover.jpg"},
+        {id: 5, name: "Look25", desc:"룩 확인하기", src:"what_nav_look05.jpg", src2:"what_nav_look05_hover.jpg"},
+        {id: 6, name: "Look46", desc:"룩 확인하기", src:"what_nav_look06.jpg", src2:"what_nav_look06_hover.jpg"},
+        {id: 7, name: "Look67", desc:"룩 확인하기", src:"what_nav_look07.jpg", src2:"what_nav_look07_hover.jpg"},
+        {id: 8, name: "Look78", desc:"룩 확인하기", src:"what_nav_look08.jpg", src2:"what_nav_look08_hover.jpg"},
+        {id: 9, name: "Look105", desc:"룩 확인하기", src:"what_nav_look09.jpg", src2:"what_nav_look09_hover.jpg"},
+        {id: 10, name: "Look106", desc:"룩 확인하기", src:"what_nav_look010.jpg", src2:"what_nav_look010_hover.jpg"}
     ];
 
-    var id, name, desc, src;
+    var id, name, desc, src, src2;
     var html = "";
     var text = "";
     for(var i in secBox){
@@ -58,6 +58,7 @@ $(document).ready(function(){
         name = secBox[i].name;
         desc = secBox[i].desc;
         src = secBox[i].src;
+        src2 = secBox[i].src2;
 
         txt = `
             <div class="sec_iner">
@@ -65,28 +66,36 @@ $(document).ready(function(){
                 <div class="like_icon">
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="sec_iner_img">
+                <div class="front">
                     <img src="img/${src}">
                 </div>
+                <div class="back">
+                    <img src="img/${src2}">
+                </div>
                 <div class="sec_iner_name">
-                    ${name}
-                </div> 
-                <div class="sec_iner_desc">
-                    ${desc} 
-                    <i class="fas fa-angle-right"></i>
-                </div>   
+                        ${name}
+                    </div> 
+                    <div class="sec_iner_desc">
+                        ${desc} 
+                        <i class="fas fa-angle-right"></i>
+                    </div>
             </div>
         `; 
         html = html + txt;
     }
     $('.sec_box').html(html);
-;
+
     $(document).on('click', '.like_icon',function(){
         var itemId = $(this).siblings('.itemId')[0].value; 
         setHeart(itemId);
     });
     $(document).on('click', '#heart_iner', function(){
         window.location = "heart_bag.html?like_icon=" + like_icon.join();
+    });
+
+    $(document).on('click', '.sec_iner', function(){
+        var itemId = $(this).children('.itemId')[0].value;
+        window.location = "what_look_wear.html?itemId=" + itemId;
     });
 
     var like_icon = [];
@@ -98,11 +107,12 @@ $(document).ready(function(){
         if(heartBox === -1){
             like_icon.push(id);
             heart_iner = like_icon.length;
-            $('#heart_iner').html(heart_iner);
+            $('#count').html(heart_iner);
         }
         else {
             alert('이미 있습니다.');
-        }   
+        } 
+        console.log(like_icon);  
                 
     }
 });

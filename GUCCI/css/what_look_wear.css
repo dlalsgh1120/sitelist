@@ -1,6 +1,6 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 .wrap{
-    position: relative;
+    /* position: relative; */
     width: 100%;
     user-select: none;
 }
@@ -12,12 +12,9 @@ header{
     top: 0;
     width: 100%;
     height: 140px;
-    background: linear-gradient(to bottom, #25211e 0%, rgba(37,33,30,0) 100%);
+    background:#000;
     z-index: 999;
     transition: .4s;
-}
-header:hover{
-    background: #000;
 }
 .head{
     display: flex;
@@ -187,142 +184,79 @@ nav{
     display: block;
 }
 main{
-    position: relative;
-    width: 100%;
-    height: 650px;
-    overflow: hidden;
-}
-.foreground{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width:  100%;
-    height: 100%;
-    transform: translate(-50% , -50%);
-    pointer-events: none;
-}
-.mrVideo{
-    width: 100%;
-}
-.vid_txt{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 99; 
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-}
-.vid_txt p{
-    font-size: 20px;
-}
-.vid_txt h1{
-    font-size: 66px;
-    font-weight: 400;
-}
-.down_icon{
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    color: #fff;
-    font-size: 30px;
-}
-section{
     width: 100%;
     padding: 10px;
     background: #fff;
 }
-.sec_box{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 2px;
-    width: 100%;
-}
-.sec_iner{
-    height: 500px;
-}
-.like_icon{
-    float: right;
-    margin-right: 8px; 
-    margin-top: 5px; 
-    cursor: pointer;
-}
-.front{
-    height: 500px;
-    background: #e7e7e7;
-    margin: 0 auto;
-    cursor: pointer;
-}
-.front img{
-    width: 200px;
-    margin-left: 50px; 
-}
-.back{
-    display: none;
-    flex-direction: column;
-    height: 500px;
-    background: #fff;
-    cursor: pointer;
-}
-.back img{
-    width: 200px;
-    margin-left: 50px; 
-}
-.sec_iner_name{
-    text-align: center;
-    margin-top: -90px; 
-}
-.sec_iner_desc{
-    text-align: center;
-    margin-top: 5px; 
-    cursor: pointer;
-}
-.sec_iner:hover .back{
-    display: flex;
-}
-.sec_iner:hover .front{
-    display: none;
-}
-.sec_box2{
+.main_box{
     position: relative;
     width: 100%;
-    height: 600px;
-    overflow: hidden;
+    background: #e7e7e7;
+    margin-top: 140px;
 }
-.mrVideo{
-    width: 100%;
-}
-.sec_BoxTxt{
+.main_front_back{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+    top: 30%;
+    left: 10px;
+    display: inline-block;
 }
-.sec_BoxTxt h1{
-    font-weight: 300;
-    font-size: 66px;
-    margin: 15px 0 15px 0;
-}
-.sec_BoxTxt span{
-    background: #1b1b1b;
-    color: #e5dfd9;
-    padding: 10px 15px;
+.main_front_back .btn_txt{
+    position: relative;
+    padding: 10px 0 10px 0;
     cursor: pointer;
     font-size: 14px;
+    color: #1b1b1b;
 }
-.sec_BoxTxt span:hover{
-    background: #313131;
+.main_front_back .btn_txt::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
 }
-.sec_box3{
-    position: relative;
+.main_front_back .btn_txt:nth-child(1)::before{
+    content: none;
+}
+.p_btn01{
+    color: #1b1b1b;
+}
+.p_btn02{
+    color: #999999;
+}
+.wear_look_left{
+    width: 300px;
+    height: 600px;
+    margin: 0 auto 0 500px;
+}
+.slide_right{
+    position: absolute;
+    top: 80px;
+    right: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+.slide_right input{
+    background: transparent;
+    border: none;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+.left_btn{
+    left: 0;
+}
+#name{
+    display: inline-block;
+    padding: 0 50px 0 50px;
+    font-size: 30px;
+}
+.main_bot{
+    width: 100%;
+    height: 300px;
+    background: #ddd;
 }
 footer{
     position: relative;

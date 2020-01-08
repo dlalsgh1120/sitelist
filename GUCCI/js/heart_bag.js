@@ -53,8 +53,7 @@ $(document).ready(function(){
     var url = window.location.search.substring(1);
     var split = url.split('=');
     var haertStr = split[1];
-    console.log(haertStr);
-    // var like_icon = haertStr.split(',');
+    var like_icon = haertStr.split(',');
     var heartList;
 
 
@@ -86,8 +85,8 @@ $(document).ready(function(){
         txt = `
                 <div class="sec_iner">
                     <input type="hidden" class="heartBox" value="${id}">
-                    <div class="like_icon">
-                        <i class="far fa-heart"></i>
+                    <div class="remove">
+                        <i class="fas fa-times"></i>
                     </div>
                     <div class="sec_iner_img">
                         <img src="img/${src}">

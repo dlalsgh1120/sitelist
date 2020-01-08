@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/what_nav_look.css">
+    <link rel="stylesheet" href="css/what_look_wear.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" 
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/what_nav_look.js"></script>
+    <script src="js/what_look_wear.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -106,37 +106,33 @@
                 </ul>
             </nav>
         </header>
+
         <main>
-            <div class="foreground">
-                <video  class="mrVideo" src="https://f1.media.brightcove.com/4/2924921183001/2924921183001_6092876284001_6092876483001.mp4?pubId=2924921183001&videoId=6092876483001" autoplay="autoplay" loop="loop" playsinline muted="muted"></video>
-            </div>
-            <div class="vid_txt">
-                <p>여성</p>
-                <h1>2020 크루즈</h1>
-            </div>
-            <div class="down_icon">
-                <i class="fas fa-angle-down"></i>
+            <div class="main_box">
+                <div class="main_front_back">
+                    <div id="front" class="btn_txt">
+                        <p class="txt01">앞면</p>
+                    </div>
+                    <div id="back" class="btn_txt">
+                        <p class="txt02 p_btn02">뒷면</p>
+                    </div>
+                </div>
+                <div class="wear_look_left">
+                    <img id="lookImg">
+                </div>
+                <div class="slide_right">
+                    <input type="button" value="〈" class="left_btn">
+                    <div id="name"></div>
+                    <input type="button" value="〉" class="right_btn">
+                    <div class="name_sorce">
+                        <span>2020 크루즈</span>
+                    </div>
+                </div>
+
+                <div class="main_bot"></div>
             </div>
         </main>
-        <section>
-            <div class="sec_box"></div>
-            <div class="sec_box2">
-                <video  class="mrVideo" src="https://f1.media.brightcove.com/4/2924921183001/2924921183001_6063406047001_6063399820001.mp4?pubId=2924921183001&videoId=6063399820001" autoplay="autoplay" loop="loop" playsinline muted="muted"></video>
-                <div class="sec_BoxTxt">
-                    <p>여성</p>
-                    <h1>2019 가을/겨울 패션쇼</h1>
-                    <span>모두보기</span>
-                </div>
-            </div>
-            <div class="sec_box3">
-                <img src="img/what_nav_look_freepoll.jpg" alt="">
-                <div class="sec_BoxTxt">
-                    <p>여성</p>
-                    <h1>2019 프리폴</h1>
-                    <span>모두보기</span>
-                </div>
-            </div>
-        </section>
+
         <footer>
             <div class="all_fot">
                 <ul class="fot_ul_left">
