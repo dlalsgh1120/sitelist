@@ -42,13 +42,12 @@ $(document).ready(function(){
         auto = setInterval(function(){
                 next();
             }, 5000);
-    }
-            
-    // 실제 작동하게 되는 부분
+    };
     function action(idx){
         $('.slide').removeClass('active').eq(idx).addClass('active');
         $('.bull').removeClass('liActive').eq(idx).addClass('liActive');
-    }
+    };
+    
     document.getElementById('logo_click').onclick = function(){
         window.location.href = "index.html";
     }; 

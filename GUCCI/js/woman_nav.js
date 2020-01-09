@@ -149,40 +149,4 @@ $(document).ready(function(){
             });
         }
     );
-
-
-    // var pdt = [
-    //     { id:1, name:"레디-투-웨어", desc: "모두보기",src: "GG_W_wear.jpg"},
-    //     { id:2, name:"여성가방", desc: "모두보기",src: "GG_W_bag.jpg"},
-    //     { id:3, name:"여성슈즈",desc: "모두보기",src: "GG_W_shose.jpg"},
-    //     { id:4, name:"지갑", desc: "모두보기",src: "GG_W_wallet.jpg"},
-    //     { id:5, name:"벨트", desc: "모두보기",src: "GG_W_belt.jpg"},
-    //     { id:6, name:"시계", desc: "모두보기",src: "GG_W_wacth.jpg"},
-    //     { id:7, name:"주얼리 & 시계", desc: "모두보기",src: "GG_W_accessory.jpg"},
-    //     { id:8, name:"아이웨어", desc: "모두보기",src:"GG_W_sunglasses.jpg"}
-    // ];
-    // var id, name, desc, src;
-    // var html = "";
-    // var text = "";
-
-    // for(var i in pdt){
-    //     id = pdt[i].id;
-    //     name = pdt[i].name;
-    //     desc = pdt[i].desc;
-    //     src = pdt[i].src;
-
-    //     txt = `
-    //             <div class="woman_box">
-    //                 <div class="woman_inner W_hover01">
-    //                     <div class="w_inner_img">
-    //                         <img src="img/${src}">
-    //                     </div>
-    //                     <span>${name}</span>
-    //                     <p>${desc}<i class="fas fa-angle-right"></i></p>
-    //                 </div>
-    //             </div>
-    //     `;
-    //     html = html + txt;
-    // }
-    // $('.sec_box').html(html);
 });

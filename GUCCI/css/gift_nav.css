@@ -276,7 +276,27 @@ section{
 .sec02:hover{
     transform: scale(1.1);
 }
-.sec01_txt{
+.sec02{
+    width: 100%;
+    height: 100%;
+    background: url('../img/GG_gift_main03.jpg') no-repeat center;
+    background-size: cover; 
+    transition: .8s;
+}
+.sec02:hover{
+    transform: scale(1.1);
+}
+.sec03{
+    width: 100%;
+    height: 100%;
+    background: url('../img/GG_gift_main04.jpg') no-repeat center;
+    background-size: cover; 
+    transition: .8s;
+}
+.sec03:hover{
+    transform: scale(1.1);
+}
+.sec_txt{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -287,18 +307,18 @@ section{
     align-items: center;
     color: #fff;
 }
-.sec01_txt span{
+.sec_txt span{
     font-size: 18px;
 }
-.sec01_txt h1{
+.sec_txt h1{
     font-size: 70px;
     font-weight: 300;
 }
-.sec01_txt p{
+.sec_txt p{
     position: relative;
     cursor: pointer;
 }
-.sec01_txt p::before{
+.sec_txt p::before{
     content: "";
     position: absolute;
     left: 0px;
@@ -306,7 +326,7 @@ section{
     width: 0;
     border-bottom: 1px solid #fff;
 }
-.sec01_txt p:hover::before{
+.sec_txt p:hover::before{
     content: "";
     position: absolute;
     left: 1px;

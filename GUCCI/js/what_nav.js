@@ -38,4 +38,10 @@ $(document).ready(function(){
     document.getElementById('2020_look').onclick = function(){
         window.location.href = "what_nav_look.html";
     };
+    document.getElementById('hollsbit').onclick = function(){
+        window.location.href = "hollsbit.html";
+    };
+    document.getElementById('index_maiin').onclick = function(){
+        window.location.href = "index.html";
+    };
 });

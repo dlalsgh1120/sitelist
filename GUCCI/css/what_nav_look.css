@@ -242,10 +242,13 @@ section{
     width: 100%;
 }
 .sec_iner{
+    position: relative;
     height: 500px;
 }
 .like_icon{
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
     margin-right: 8px; 
     margin-top: 5px; 
     cursor: pointer;
@@ -261,8 +264,11 @@ section{
     margin-left: 50px; 
 }
 .back{
+    position: absolute;
+    top: 0px;
     display: none;
     flex-direction: column;
+    width: 100%;
     height: 500px;
     background: #fff;
     cursor: pointer;
@@ -273,7 +279,6 @@ section{
 }
 .sec_iner_name{
     text-align: center;
-    margin-top: -90px; 
 }
 .sec_iner_desc{
     text-align: center;

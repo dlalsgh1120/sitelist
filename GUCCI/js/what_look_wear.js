@@ -70,14 +70,14 @@ $(document).ready(function(){
         });
     };
 
-    var html = "";
-    var txt = "";
-    var id, name, src;
+    // var html = "";
+    // var txt = "";
+    // var id, name, src;
     var index = 0;
     var length = secBox.length;
     var timer;
-    getImgs();
-    setLable(index);
+    // getImgs();
+    // setLable(index);
     $('.itemImg').eq(0).css('left', '0%');
     $(document).on('click', '#left_btn', function(){
         prev();
@@ -85,22 +85,22 @@ $(document).ready(function(){
     $(document).on('click', '#right_btn', function(){
         next();
     });
-    function getImgs(){
-        html = "";
-        for(var i in secBox){
-            txt = `
-                <div class= "itemImg">
-                    <img src="img/"${secBox[i].src}">
-                </div>
-            `;
-            html = html + txt;
-        }
-        $('.wear_look_left').html(html);
-    }
-    function setLable(_idx){
-        var lable = secBox[_idx].name;
-        $('#lable_name').html(lable);
-    }
+    // function getImgs(){
+    //     html = "";
+    //     for(var i in secBox){
+    //         txt = `
+    //             <div class= "itemImg">
+    //                 <img src="img/"${secBox[i].src}">
+    //             </div>
+    //         `;
+    //         html = html + txt;
+    //     }
+    //     $('.wear_look_left').html(html);
+    // }
+    // function setLable(_idx){
+    //     var lable = secBox[_idx].name;
+    //     $('#lable_name').html(lable);
+    // }
     function next(){
         $('.itemImg').eq(index).animate({
             left: "-100%"
