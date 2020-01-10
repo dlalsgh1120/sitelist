@@ -7,18 +7,15 @@ $(document).ready(function(){
         headerHeight = $('header').height();
         if(scrollTop > headerHeight){
             $('nav').addClass('fixed');
-            $('.left_icon_ul').addClass('block');
-            $('.right_icon_ul').addClass('block');
+            $('.left_ul').addClass('block');
+            $('.right_ul').addClass('block');
         }
         else{
             $('nav').removeClass('fixed');
-            $('.left_icon_ul').removeClass('block');
-            $('.right_icon_ul').removeClass('block');
+            $('.left_ul').removeClass('block');
+            $('.right_ul').removeClass('block');
         }
     });
-
-
-
 
     var index = 0;
     var length = $('.slide').length;

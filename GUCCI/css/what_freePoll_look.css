@@ -27,12 +27,16 @@ header:hover{
     line-height: 80px;
 }
 .left_ul{
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: calc((100% - 250px) / 3);
     height: 70px;
     margin-left: 20px;
+    z-index: 999;
 }
 .left_ul .left_li{
     padding: 0 12px;
@@ -56,6 +60,9 @@ header:hover{
     cursor: pointer;
 }
 .right_ul{
+    position: fixed;
+    right: 0;
+    top:0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -63,6 +70,7 @@ header:hover{
     height: 70px;
     color: #e5dfd9;
     margin-right: 20px; 
+    z-index: 999;
 }
 .right_ul .right_li{
     padding: 0 12px;

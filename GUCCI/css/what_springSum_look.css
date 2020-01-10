@@ -5,7 +5,7 @@
     user-select: none;
 }
 ul{list-style: none;}
-img{width: 100%;}
+img{width: 100%;} 
 header{
     position: absolute;
     left: 0;
@@ -27,12 +27,16 @@ header:hover{
     line-height: 80px;
 }
 .left_ul{
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: calc((100% - 250px) / 3);
     height: 70px;
     margin-left: 20px;
+    z-index: 999;
 }
 .left_ul .left_li{
     padding: 0 12px;
@@ -56,6 +60,9 @@ header:hover{
     cursor: pointer;
 }
 .right_ul{
+    position: fixed;
+    right: 0;
+    top: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -63,6 +70,7 @@ header:hover{
     height: 70px;
     color: #e5dfd9;
     margin-right: 20px; 
+    z-index: 999;
 }
 .right_ul .right_li{
     padding: 0 12px;
@@ -296,15 +304,6 @@ section{
 .sec_iner:hover .front{
     display: none;
 }
-.sec_box2{
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-}
-.mrVideo{
-    width: 100%;
-}
 .sec_BoxTxt{
     position: absolute;
     left: 50%;
@@ -330,6 +329,33 @@ section{
 }
 .sec_BoxTxt span:hover{
     background: #313131;
+}
+.sec_box2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+.secbox2_img{
+    position: relative;
+    height: auto;
+}
+.secbox2_txt{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.secbox2_txt h1{
+    font-weight: 300;
+    font-size: 30px;
+}
+.secbox2_txt p{
+    font-size: 15px;
 }
 footer{
     position: relative;

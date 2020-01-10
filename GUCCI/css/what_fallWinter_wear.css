@@ -13,7 +13,7 @@ header{
     width: 100%;
     height: 140px;
     background:#000;
-    z-index: 999;
+    z-index: 9999;
     transition: .4s;
 }
 .head{
@@ -24,12 +24,16 @@ header{
     line-height: 80px;
 }
 .left_ul{
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: calc((100% - 250px) / 3);
     height: 70px;
     margin-left: 20px;
+    z-index: 999;
 }
 .left_ul .left_li{
     padding: 0 12px;
@@ -53,6 +57,9 @@ header{
     cursor: pointer;
 }
 .right_ul{
+    position: fixed;
+    right: 0;
+    top: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -60,6 +67,7 @@ header{
     height: 70px;
     color: #e5dfd9;
     margin-right: 20px; 
+    z-index: 999;
 }
 .right_ul .right_li{
     padding: 0 12px;
@@ -201,6 +209,7 @@ main{
     top: 30%;
     left: 10px;
     display: inline-block;
+    z-index: 1000;
 }
 .main_front_back .btn_txt{
     position: relative;
@@ -236,17 +245,23 @@ main{
     position: absolute;
     left: 0;
     top: 0;
-    width: 300px;
+    width: 100%;
     height: 600px;
+    left: 100%;
+    text-align: center;
+    z-index: 500;
 }
 .itemImg img{
-   width: 100%;
+   width: auto;
+   height: 100%;
+   margin-right: 100px; 
 }
 .slide_right{
     position: absolute;
     top: 80px;
     right: 300px;
     margin: 0 auto;
+    z-index: 1000;
 }
 .slide_right input{
     background: transparent;

@@ -27,12 +27,16 @@ header:hover{
     line-height: 80px;
 }
 .left_ul{
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: calc((100% - 250px) / 3);
     height: 70px;
     margin-left: 20px;
+    z-index: 999;
 }
 .left_ul .left_li{
     padding: 0 12px;
@@ -56,6 +60,9 @@ header:hover{
     cursor: pointer;
 }
 .right_ul{
+    position: fixed;
+    right: 0;
+    top: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -63,6 +70,7 @@ header:hover{
     height: 70px;
     color: #e5dfd9;
     margin-right: 20px; 
+    z-index: 999;
 }
 .right_ul .right_li{
     padding: 0 12px;
@@ -238,131 +246,50 @@ section{
     margin: 0 auto;
 }
 .sec_box{
-    width: 100%;
-}
-.woman_box{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
 }
-.woman_inner{
+.woman_box{
     position: relative;
-    height: 500px;
     background: #e7e7e7;
 }
-.woman_inner:nth-child(1){
-    height: auto;
-    grid-row: 1/3;
-}
-.woman_inner:hover{
-    background: #f5f5f5;
-}
-.w_inner_img01{
-    width: 350px;
-    height: 900px;
-    background: url('../img/GG_W_wear.jpg') no-repeat center;
-    background-size: cover; 
+.front{
+    height: 500px;
+    background: #e7e7e7;
     margin: 0 auto;
     cursor: pointer;
 }
-.woman_inner span{
-    display: block;
+.front img{
+    width: 300px;
+    margin-left: 50px; 
+}
+.back{
+    display: none;
+    flex-direction: column;
+    height: 500px;
+    background: #fff;
+    cursor: pointer;
+}
+.back img{
+    width: 300px;
+    margin-left: 50px; 
+}
+.name{
     text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    margin-top: 10px;
-    cursor: pointer; 
 }
-.woman_inner p{
-    display: block;
+.desc{
     text-align: center;
-    font-size: 13px;
+    margin-top: 5px; 
     cursor: pointer;
 }
-.w_inner_img02{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_bag.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.w_inner_img03{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_shose.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.w_inner_img04{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_wallet.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.w_inner_img05{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_belt.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.woman_box_bot{
+.woman_box:hover .back{
     display: flex;
-    width: 100%;
-    height: 500px;
 }
-.box_W_bot{
-    width: calc((100% - 5px) /3);
-    height: 100%;
-    margin-left: 5px; 
-    margin-top: 5px;
-    float: left;
-    background: #e7e7e7;
-    cursor: pointer; 
-}
-.box_W_bot:first-child{
-    margin-left: 0px; 
-}
-.box_W_bot:hover{
-    background: #f5f5f5;
-}
-.under_img{
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-}
-.w_bot_wacth{
-    background: url('../img/GG_W_wacth.jpg') no-repeat center;
-    background-size: cover;
-}
-.w_bot_accessory{
-    background: url('../img/GG_W_accessory.jpg') no-repeat center;
-    background-size: cover;
-}
-.w_bot_sunglasses{
-    background: url('../img/GG_W_sunglasses.jpg') no-repeat center;
-    background-size: cover;
-}
-.box_W_bot span{
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    margin-top: 10px;
-    cursor: pointer; 
-}
-.box_W_bot p{
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    cursor: pointer;
+.woman_box:hover .front{
+    display: none;
 }
 footer{
     width: 100%;
