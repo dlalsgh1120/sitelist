@@ -1,0 +1,61 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<style>
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.box{
+			height: 300px;
+			background: black;
+		}
+		.box:nth-child(odd){
+			background:darkgray;
+		}
+		.box1{
+			width: calc(100% / 4);
+		}
+		.box2{
+			width: calc(100% / 2);
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container"></div>
+	<script>
+		$(document).ready(function(){
+			// type1은 작은거 type2는 큰거
+			var items = [
+				{id:1, name:'name1', type:1},
+				{id:2, name:'name2', type:1},
+				{id:3, name:'name3', type:1},
+				{id:4, name:'name4', type:1},
+				{id:5, name:'name5', type:2},
+				{id:6, name:'name6', type:1},
+				{id:7, name:'name7', type:1},
+				{id:8, name:'name8', type:1},
+				{id:9, name:'name9', type:1},
+				{id:10, name:'name10', type:2}
+			];
+
+			var id,name,type;
+			var html = '';
+			var txt = '';
+			var className = '';
+
+			for(var i in items){
+				className = 'box1';
+				type = items[i].type;
+				if(type === 2){
+					className = 'box2';
+				}
+				txt = `<div class='box ${className}'></div>`;
+				html += txt;
+			}
+			$('.container').html(html);
+		});
+	</script>
+</body>
+</html>
