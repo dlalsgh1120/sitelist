@@ -212,186 +212,111 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+    width: 100%;
 }
 .vid_txt p{
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px; 
 }
 .vid_txt h1{
+    position: relative;
     font-size: 66px;
     font-weight: 400;
+    margin-top: 40px; 
 }
-.down_icon{
+.vid_txt h1::before{
+    content: "";
     position: absolute;
-    left: 50%;
-    bottom: 20px;
-    color: #fff;
-    font-size: 30px;
+    left: 12%;
+    bottom: -11px;
+    width: 80%;
+    height: 1px;
+    background: #fff;
 }
 section{
     width: 100%;
+    padding: 10px;
     background: #fff;
-    padding: 15px;
-    margin: 0 auto;
+}
+.sec_nav{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+}
+.left_sec{
+    position: absolute;
+    left: 0;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right_sec{
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+    justify-content: flex-end;
 }
 .sec_box{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    overflow: hidden;
 }
-.woman_box{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    width: 100%;
-    margin: 0 auto;
-}
-.woman_inner{
+.sec_inr{
     position: relative;
     height: 500px;
+    border: 1px solid #fff;
+}
+.box1{
+    width: calc(100% / 4);
+}
+.box2{
+    width: calc(100% / 2);
+}
+.front{
+    height: 500px;
     background: #e7e7e7;
-    cursor: pointer;
-}
-.woman_inner:nth-child(1){
-    height: auto;
-    grid-row: 1/3;
-}
-.woman_inner:hover{
-    background: #f5f5f5;
-}
-.w_inner_img01{
-    width: 350px;
-    height: 900px;
-    background: url('../img/GG_W_wear.jpg') no-repeat center;
-    background-size: cover; 
     margin: 0 auto;
     cursor: pointer;
 }
-.woman_inner:hover .w_inner_img01{
-    background: url('../img/GG_W_wear_hover.jpg') no-repeat center;
-    background-size: cover;
+.front img{
+    width: 100%;
 }
-.woman_inner span{
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    margin-top: 10px;
-    cursor: pointer; 
-}
-.woman_inner p{
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    cursor: pointer;
-}
-.w_inner_img02{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_bag.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.woman_inner:hover .w_inner_img02{
-    background: url('../img/GG_W_bag_hover.jpg') no-repeat center;
-    background-size: cover;
-}
-.w_inner_img03{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_shose.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.woman_inner:hover .w_inner_img03{
-    background: url('../img/GG_W_shose_hover.jpg') no-repeat center;
-    background-size: cover;
-}
-.w_inner_img04{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_wallet.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.woman_inner:hover .w_inner_img04{
-    background: url('../img/GG_W_wallet_hover.jpg') no-repeat center;
-    background-size: cover;
-}
-.w_inner_img05{
-    width: 600px;
-    height: 400px;
-    background: url('../img/GG_W_belt.jpg') no-repeat center;
-    background-size: cover; 
-    margin: 0 auto;
-    cursor: pointer;
-}
-.woman_inner:hover .w_inner_img05{
-    background: url('../img/GG_W_belt_hover.jpg') no-repeat center;
-    background-size: cover;
-}
-.woman_box_bot{
-    display: flex;
+.back{
+    position: absolute;
+    top: 0px;
+    display: none;
+    flex-direction: column;
     width: 100%;
     height: 500px;
-}
-.box_W_bot{
-    width: calc((100% - 5px) /3);
-    height: 100%;
-    margin-left: 5px; 
-    margin-top: 5px;
-    float: left;
-    background: #e7e7e7;
-    cursor: pointer; 
-}
-.box_W_bot:first-child{
-    margin-left: 0px; 
-}
-.box_W_bot:hover{
-    background: #f5f5f5;
-}
-.under_img{
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-}
-.w_bot_wacth{
-    background: url('../img/GG_W_wacth.jpg') no-repeat center;
-    background-size: cover;
-}
-.box_W_bot:hover .w_bot_wacth{
-    background: url('../img/GG_W_wacth_hover.jpg') no-repeat center;
-    background-size: cover;
-}
-.w_bot_accessory{
-    background: url('../img/GG_W_accessory.jpg') no-repeat center;
-    background-size: cover;
-}
-.box_W_bot:hover .w_bot_accessory{
-    background: url('../img/GG_W_accessory_hover.jpg') no-repeat center;
-    background-size: cover;
-}
-.w_bot_sunglasses{
-    background: url('../img/GG_W_sunglasses.jpg') no-repeat center;
-    background-size: cover;
-}
-.box_W_bot:hover .w_bot_sunglasses{
-    background: url('../img/GG_W_sunglasses_hover.jpg') no-repeat center;
-    background-size: cover;
-}
-.box_W_bot span{
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    margin-top: 10px;
-    cursor: pointer; 
-}
-.box_W_bot p{
-    display: block;
-    text-align: center;
-    font-size: 13px;
+    background: #fff;
     cursor: pointer;
+}
+.back img{
+    width: 90%;
+}
+.sec_inr_name{
+    text-align: center;
+    color: #999;
+}
+.sec_inr_price{
+    text-align: center;
+    color: #999;
+}
+.sec_inr_desc{
+    text-align: center;
+    margin-top: 5px; 
+    cursor: pointer;
+    color: #999;
+}
+.sec_inr:hover .back{
+    display: flex;
+}
+.sec_inr:hover .front{
+    display: none;
 }
 footer{
     width: 100%;

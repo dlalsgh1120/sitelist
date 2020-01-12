@@ -13,7 +13,7 @@ $(document).ready(function(){
     ];
     var scrollTop, headerHeight;
     var html = "";
-    var txt = "";
+    var text = "";
     var id, name, src;
     var index = 0;
     var item;
