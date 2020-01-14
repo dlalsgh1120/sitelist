@@ -267,14 +267,14 @@ section{
 }
 .sec_inr{
     position: relative;
-    height: 500px;
     border: 1px solid #fff;
 }
-.box1{
+.Wearbox1{
     width: calc(100% / 4);
 }
-.box2{
+.Wearbox2{
     width: calc(100% / 2);
+    height: 100%;
 }
 .front{
     height: 500px;
@@ -312,10 +312,10 @@ section{
     cursor: pointer;
     color: #999;
 }
-.sec_inr:hover .back{
+.Wearbox1:hover .back{
     display: flex;
 }
-.sec_inr:hover .front{
+.Wearbox1:hover .front{
     display: none;
 }
 footer{

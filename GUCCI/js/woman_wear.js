@@ -4,19 +4,22 @@ $(document).ready(function(){
         {id: 2, name: "Disney x Gucci 실크 파자마 팬츠", desc:"쇼핑하기",price: '￦2,000,000', src:"woman_nav_img02.jpg", src2:"woman_nav_img02_hover.jpg", type: false},
         {id: 3, name: "울 실크 팬츠", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img03.jpg", src2:"woman_nav_img03_hover.jpg", type: false},
         {id: 4, name: "캐디 울 실크 숏 드레스", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img04.jpg", src2:"woman_nav_img04_hover.jpg", type: false},
-        {id: 5, src:"woman_nav_img05.jpg", src2:"woman_nav_img05.jpg", type: true},
+        {id: 5,name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", src:"woman_nav_img05.jpg", src2:"woman_nav_img05.jpg", type: true},
         {id: 6, name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦2,000,000', src:"woman_nav_img06.jpg", src2:"woman_nav_img06_hover.jpg", type: false},
         {id: 7, name: "홀스슈 디테일의 트위드 스커트", desc:"쇼핑하기",  price: '￦2,000,000',src:"woman_nav_img07.jpg", src2:"woman_nav_img07_hover.jpg"},
         {id: 8, name: "라이언 헤드 토글 디테일의 트위드 재킷", desc:"쇼핑하기", price: '￦2,000,000', src:"woman_nav_img08.jpg", src2:"woman_nav_img08_hover.jpg", type: false},
         {id: 9, name: "Disney x Gucci 저지 드레스", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img09.jpg", src2:"woman_nav_img09_hover.jpg", type: false},
         {id: 10, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,000,000',src:"woman_nav_img010.jpg", src2:"woman_nav_img010.jpg", type: true},
-        {id: 11, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,000,000',src:"woman_nav_img010.jpg", src2:"what_nav_look010_hover.jpg", type: false}
+        {id: 11, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,000,000',src:"woman_nav_img011.jpg", src2:"woman_nav_img011_hover.jpg", type: false},
+        {id: 12, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦2,000,000',src:"woman_nav_img012.jpg", src2:"woman_nav_img012_hover.jpg", type: false},
+        {id: 13, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦2,000,000',src:"woman_nav_img013.jpg", src2:"woman_nav_img013_hover.jpg", type: false},
+        {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦2,000,000',src:"woman_nav_img011.jpg", src2:"woman_nav_img011_hover.jpg", type: false}
     ];
     var scrollTop, headerHeight;
     var id, name, desc, src, src2, type, price;
     var html = "";
     var text= "";
-    var className = "";
+    var typeBox = "";
     // var index = 0;
     $(document).scroll(function(){
         scrollTop = $(window).scrollTop();
@@ -63,16 +66,16 @@ $(document).ready(function(){
         price = secBox[i].price;
         type = secBox[i].type;
 
-        typeBox = 'box1';
+        typeBox = 'Wearbox1';
         if(type === true){
-            typeBox = 'box2';
+            typeBox = 'Wearbox2';
         }
 
         txt = `
             <div class="sec_inr ${typeBox}">
                 <input type="hidden" value="${id}">
                 <div class="front">
-                    <img src="img/${src}">
+                    <img src="img/${src}" class="${typeBox}">
                 </div>
                 <div class="back">
                     <img src="img/${src2}">
