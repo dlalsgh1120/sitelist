@@ -63,13 +63,13 @@ $(document).ready(function(){
         price = secBox[i].price;
         type = secBox[i].type;
 
-        className = 'box1';
+        typeBox = 'box1';
         if(type === true){
-            className = 'box2';
+            typeBox = 'box2';
         }
 
         txt = `
-            <div class="sec_inr ${className}">
+            <div class="sec_inr ${typeBox}">
                 <input type="hidden" value="${id}">
                 <div class="front">
                     <img src="img/${src}">
