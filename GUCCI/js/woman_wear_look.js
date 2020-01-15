@@ -16,14 +16,13 @@ $(document).ready(function(){
         {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img014.jpg", src2:"woman_nav_img014_hover.jpg",src3:"woman_nav_img014_hover02.jpg",src4:"woman_nav_img014_hover03.jpg", type: false}
     ];
     var scrollTop, headerHeight;
-    var id, name, desc, src, src2,src3,src4,type, price;
     var html = "";
-    var text= "";
-    var typeBox = "";
+    var text = "";
+    var id, name, src, src2;
     var index = 0;
-    var timer;
-    var length = secBox.length;
     var item;
+    var length = secBox.length;
+    var timer;
     $(document).scroll(function(){
         scrollTop = $(window).scrollTop();
         
@@ -41,7 +40,7 @@ $(document).ready(function(){
     });
     document.getElementById('main_logo').onclick = function(){
         window.location.href = "index.html";
-    };  
+    }; 
     document.getElementById('n_span01').onclick = function(){
         window.location.href = "what_nav.html";
     };
@@ -60,118 +59,81 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "perfume_nav.html";
     };
-    for(var i in secBox){
-        id = secBox[i].id;
-        name = secBox[i].name;
-        desc = secBox[i].desc;
-        src = secBox[i].src;
-        src2 = secBox[i].src2;
-        src3 = secBox[i].src3;
-        src4 = secBox[i].src4;
-        price = secBox[i].price;
-        type = secBox[i].type;
 
-        typeBox = 'Wearbox1';
-        if(type === true){
-            typeBox = 'Wearbox2';
-        }
+    function getUrl(){
+        var pageUrl = window.location.search.substring(1);
+        var value = pageUrl.split('=')[1] * 1;
+        item = secBox.filter(function(res, idx){
+            if(res.id === value){
+                index = idx;
+                return res;
+            }
+        });
 
-        txt = `
-            <div class="sec_inr ${typeBox}">
-                <input type="hidden" class="itemId" value="${id}">
-                <div class="front">
-                    <img src="img/${src}" class="${typeBox}">
-                </div>
-                <div class="back">
-                    <input type="button" value="〈" id="left_btn" class="btn">
-                    <img src="img/${src2}">
-                    <input type="button" value="〉" id="right_btn" class="btn">
-                    <div class="like_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="sec_inr_name">
-                        ${name}
-                    </div>
-                    <div class="sec_inr_price">
-                        ${price}
-                    </div>
-                    <div class="sec_inr_desc">
-                        ${desc}
-                        <i class="fas fa-angle-right"></i>
-                    </div>
-                </div>
-            </div>
-        `;
-        html = html + txt;
-    }
-    $('.sec_box').html(html);
-    $(document).on('click', '.sec_inr', function(){
-        var itemId = $(this).children('.itemId')[0].value;
-        window.location = "woman_wear_look.html?itemId=" + itemId;
+        $('.lookImg01').eq(index).css('left', '0');
+        $('#lable_name').html(item[0].name);
+    };
+
+    
+    getImgs();
+    $(document).on('click', '#left_btn', function(){
+        prev();
+    });
+    $(document).on('click', '#right_btn', function(){
+        next();
     });
 
-    // function getUrl(){
-    //     item = secBox.filter(function(res, idx){
-    //         if(res.id === secBox[i].src3){
-    //             index = idx;
-    //             return res;
-    //         }
-    //     });
-    //     $('.back_img').eq(index).css('left', '0');
-    // }
-    // getImg();
-    // $(document).on('click', '#left_btn', function(){
-    //     prev();
-    // });
-    // $(document).on('click', '#right_btn', function(){
-    //     next();
-    // });
-    // function getImg(){
-    //     html = "";
-    //     for(var i in secBox){
-    //         txt_img = `
-    //                 <div class="back_img">
-    //                     <img class="lookImg" src="img/${secBox[i].src3}">
-    //                 </div>
-    //                 <div class="back_img">
-    //                     <img class="lookImg" src="img/${secBox[i].src4}">
-    //                 </div>
-            
-    //         `;
-    //         html = html + txt_img;
-    //     }
-    //     $('.back_img').html(html);
-    //     getUrl();
-    // }
+    function getImgs(){
+        html = "";
+        for(var i in secBox){
+            txt = `
+                <div class= "itemImg">
+                    <div class="lookImg01 lookWear_left">
+                        <img class="lookImg01" src="img/${secBox[i].src}">
+                    </div>
+                    <div class="lookImg01 lookWear_right">
+                        <img class="lookImg01" src="img/${secBox[i].src2}">
+                    </div>
+                </div>
+            `;
+            html = html + txt;
+        }
+        $('.wear_look').html(html);
+        getUrl();
+    }
+    function setLable(_idx){
+        var lable = secBox[_idx].name;
+        $('#lable_name').html(lable);
+    }
+    function next(){
+        $('.itemImg').eq(index).animate({
+            left: "-100%"
+        }, timer);
+        index++;
+        index = index%length;
+        setLable(index);
 
-    // function next(){
-    //     $('.back_img').eq(index).animate({
-    //         left: '-100%'
-    //     },timer);
-    //     index++;
-    //     index = index%length;
+        $('.itemImg').eq(index).css({
+            left: "100%"
+        }). animate({
+            left: "0%"
+        }, timer);
+    }
+    function prev(){
+        $('.itemImg').eq(index).animate({
+            left: '100%'
+        }, timer);
 
-    //     $('.back_img').eq(index).css({
-    //         left: "100%"
-    //     }). animate({
-    //         left: "0%"
-    //     }, timer);
-    // }
-    // function prev(){
-    //     $('.back_img').eq(index).animate({
-    //         left: '100%'
-    //     }, timer);
+        index--;
+        if (index < 0) {
+            index = length - 1;
+        }
+        setLable(index);
 
-    //     index--;
-    //     if (index < 0) {
-    //         index = length - 1;
-    //     }
-
-	// 	$('.back_img').eq(index).css({
-	// 		left: '-100%'
-	// 	}).animate({
-	// 		left: '0%'
-	// 	}, timer);
-    // };
-    
-});
+		$('.itemImg').eq(index).css({
+			left: '-100%'
+		}).animate({
+			left: '0%'
+		}, timer);
+    };
+}); 

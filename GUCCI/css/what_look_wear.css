@@ -320,7 +320,7 @@ main{
     width: 250px;
     height: 1px;
     background: #c8c6c5;
-}
+} 
 .shopping::before{
     content: "";
     position: absolute;

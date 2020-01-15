@@ -12,12 +12,14 @@ header{
     top: 0;
     width: 100%;
     height: 140px;
-    background: linear-gradient(to bottom, #25211e 0%, rgba(37,33,30,0) 100%);
+    background: transparent;
     z-index: 999;
     transition: .4s;
+    color: #000;
 }
 header:hover{
     background: #000;
+    color: #e5dfd9;
 }
 .head{
     display: flex;
@@ -40,12 +42,10 @@ header:hover{
 }
 .left_ul .left_li{
     padding: 0 12px;
-    color: #e5dfd9;
     font-size: 12px;
     cursor: pointer;
 }
 .left_li .fas{
-    color: #e5dfd9;
     margin-right: 4px;
 }
 .left_ul .left_li:hover, .left_li:hover .fas{
@@ -68,22 +68,16 @@ header:hover{
     align-items: center;
     width: calc((100% - 250px) / 3);
     height: 70px;
-    color: #e5dfd9;
     margin-right: 20px; 
     z-index: 999;
 }
 .right_ul .right_li{
     padding: 0 12px;
-    color: #e5dfd9;
     font-size: 12px;
     cursor: pointer;
 }
-.right_li .far{
-    color: #e5dfd9;
-}
 .right_li .fa-search{
     font-size: 20px;
-    color: #e5dfd9;
 }
 .right_ul .right_li:hover, .right_li:hover .far, .right_li:hover .fas{
     color: #fff;
@@ -102,7 +96,6 @@ nav{
     display: none;
 }
 .left_icon_li{
-    color: #e5dfd9;
     font-size: 13px;
     cursor: pointer;
 }
@@ -117,7 +110,6 @@ nav{
     display: none;
 }
 .right_icon_li{
-    color: #e5dfd9;
     font-size: 13px;
     padding: 0 11px;
     cursor: pointer;
@@ -128,9 +120,10 @@ nav{
 }
 .block{
     display: flex;
+    color: #e5dfd9;
 }
 .left_icon_ul .left_icon_li:hover, .right_icon_ul .right_icon_li:hover{
-    color: #fff;
+    color: #e5dfd9;
 }
 .n_ul{
     display: flex;
@@ -143,15 +136,14 @@ nav{
     left: 0;
     top: 0;
     background: #000;
+    color: #e5dfd9;
 }
 .n_ul .n_li{
     position: relative;
-    color: #e5dfd9;
     margin: 0 20px;
     font-size: 13px;
 }
 .n_ul .n_li:hover span{
-    color: #fff;
     cursor: pointer;
 }
 .n_li .fa-sort-up{
@@ -193,143 +185,33 @@ nav{
 }
 .n_li:hover .fa-sort-up{
     display: block;
+    color: #e5dfd9;
 }
-
 main{
+    width: 100%;
+}
+.main_box{
     position: relative;
     width: 100%;
-    height: 650px;
-    overflow: hidden;
-}
-.vid_txt{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 99; 
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    width: 100%;
-}
-.vid_txt p{
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 30px; 
-}
-.vid_txt h1{
-    position: relative;
-    font-size: 66px;
-    font-weight: 400;
-    margin-top: 40px; 
-}
-.vid_txt h1::before{
-    content: "";
-    position: absolute;
-    left: 12%;
-    bottom: -11px;
-    width: 80%;
-    height: 1px;
-    background: #fff;
-}
-section{
-    width: 100%;
-    padding: 10px;
-    background: #fff;
-}
-.sec_nav{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    background: #fff;
-}
-.left_sec{
-    position: absolute;
-    left: 0;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: bold;
-} 
-.sec_box{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    overflow: hidden;
-}
-.sec_inr{
-    position: relative;
-    border: 1px solid #fff;
-}
-.like_icon{
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-right: 8px; 
-    margin-top: 5px; 
-    cursor: pointer;
-}
-.Wearbox1{
-    width: calc(100% / 4);
-}
-.Wearbox2{
-    width: calc(100% / 2);
-    height: 100%;
-}
-.front{
-    height: 500px;
     background: #e7e7e7;
-    margin: 0 auto;
-    cursor: pointer;
+    overflow: hidden;
 }
-.front img{
-    width: 100%;
-}
-.back{
-    position: absolute;
-    top: 0px;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    height: 500px;
-    background: #fff;
-    cursor: pointer;
-}
-.back img{
-    width: 90%;
-    margin-left: 20px; 
-}
-.back_img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    height: 300px;
-    background: #fff;
-    cursor: pointer;
-    left: 100%;
-}
-.back_img img{
-    width: 90%;
+.wear_look{
+    position: relative;
+    height: 800px;
 }
 .btn{
     position: absolute;
-    top: 0;
-    z-index: 999;
-    width: 50px;
-    height: 100%;
+    top: 45%;
+    width: 100px;
+    height: 100px;
     background: transparent;
     border: none;
     outline: none;
-    cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
 }
 #left_btn{
     left: 0;
@@ -337,27 +219,33 @@ section{
 #right_btn{
     right: 0;
 }
-.sec_inr_name{
+.itemImg{
+    position: relative;
+}
+.lookImg01{
+    position: absolute;
+    top: 100px;
+    left: 100%;
     text-align: center;
-    color: #999;
+    z-index: 500;
 }
-.sec_inr_price{
-    text-align: center;
-    color: #999;
+.lookImg01 img{
+   width: auto;
+   margin-left: 100px; 
 }
-.sec_inr_desc{
-    text-align: center;
-    margin-top: 5px; 
-    cursor: pointer;
-    color: #999;
+.lookWear_left{
+    left: 0;
 }
-.Wearbox1:hover .back{
-    display: flex;
+.lookWear_right{
+    right: 0;
 }
-.Wearbox1:hover .front{
-    display: none;
+.driving{
+    width: 100%;
+    height: 600px;
+    background: rgba(225,225,225,0.2);
 }
 footer{
+    position: relative;
     width: 100%;
     background: #1b1b1b;
     padding: 50px 60px;
