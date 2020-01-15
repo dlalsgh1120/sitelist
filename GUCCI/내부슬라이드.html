@@ -1,0 +1,141 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<style>
+		.container{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			width: 1000px;
+			margin: 100px auto;
+		}
+		.item{
+			position: relative;
+			height: 300px;
+		}
+		.arrow{
+			z-index: 10000;
+			position: absolute;
+			height: 100%;
+			width: 50px;
+			top: 0;
+			cursor: pointer;
+			user-select: none;
+			display: flex;
+		}
+		.left{ left: 0;}
+		.right{ right: 0;}
+		b{ margin: auto;}
+
+		img{
+			width: 100%;
+		}
+		.wrapper{
+			overflow: hidden;
+			height: 300px;
+			position: relative;
+		}
+		.slide{
+			position: absolute;
+			left:100%;
+			top: 0;
+			height: 100%;
+			width: 100%;
+		}
+		.slide:nth-child(1){
+			left: 0;
+		}
+		.back{
+			display: none;
+		}
+		.item:hover .front{ display: none; }
+		.item:hover .back{ display: block; }
+	</style>
+</head>
+<body>
+	<div class="container"></div>
+	<script>
+		$(document).ready(function() {
+			var items = [
+				{id: 1, src: 'woman_nav_img01'},
+				{id: 1, src: 'woman_nav_img02'},
+				{id: 1, src: 'woman_nav_img03'},
+				{id: 1, src: 'woman_nav_img04'},
+				{id: 1, src: 'woman_nav_img09'},
+				{id: 1, src: 'woman_nav_img06'},
+				{id: 1, src: 'woman_nav_img07'},
+				{id: 1, src: 'woman_nav_img08'}
+			];
+
+			var txt = "";
+			var html = "";
+			var src, src2, src3, src4;
+
+			for(var i in items){
+				src = items[i].src;
+				src2 = src + "_hover";
+				src3 = src2 + "02";
+				src4 = src2 + "03";
+
+				txt = `
+					<div class="item">
+						<div class="front">
+							<img src="img/${src}.jpg">
+						</div>
+						<div class="back">
+							<span class="arrow left">
+								<b><</b>
+							</span>
+							<span class="arrow right">
+								<b>></b>
+							</span>
+							<div class="wrapper">
+								<div class="slide">
+									<img src="img/${src2}.jpg">
+								</div>
+								<div class="slide">
+									<img src="img/${src3}.jpg">
+								</div>
+								<div class="slide">
+									<img src="img/${src4}.jpg">
+								</div>
+							</div>
+						</div>
+					</div>
+				`;
+				html += txt;
+			}
+
+			$('.container').html(html);
+		});
+		var itemIndex;
+		var viewIndex;
+		var timer = 500;
+		var length = 3;
+
+		$(document).on('mouseover', '.item', function(){
+			viewIndex = 0;
+				$(this).find('.slide').css({
+				left: '100%'
+			})
+			$(this).find('.slide').eq(0).css({
+				left: 0
+			});
+		});
+
+		$(document).on('click', '.right', function(){
+			itemIndex = $(this).parent().parent().index();
+			$('.item').eq(itemIndex).find('.slide').eq(viewIndex).animate({
+				left: '-100%'
+			}, timer);
+			viewIndex ++;
+			viewIndex = viewIndex % length;
+
+			$('.item').eq(itemIndex).find('.slide').eq(viewIndex).css({
+				left: '100%'
+			}).animate({
+				left: '0%'
+			}, timer);
+		});
+	</script>
+</body>
+</html>
