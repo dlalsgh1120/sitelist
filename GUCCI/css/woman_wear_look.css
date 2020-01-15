@@ -193,12 +193,10 @@ main{
 .main_box{
     position: relative;
     width: 100%;
+    height: 800px;
     background: #e7e7e7;
     overflow: hidden;
-}
-.wear_look{
-    position: relative;
-    height: 800px;
+    margin: 0 auto;
 }
 .btn{
     position: absolute;
@@ -219,25 +217,45 @@ main{
 #right_btn{
     right: 0;
 }
-.itemImg{
-    position: relative;
-}
-.lookImg01{
+.wear_look{
     position: absolute;
-    top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
     left: 100%;
     text-align: center;
-    z-index: 500;
-}
-.lookImg01 img{
-   width: auto;
-   margin-left: 100px; 
 }
 .lookWear_left{
     left: 0;
+    width: 500px;
 }
 .lookWear_right{
     right: 0;
+    width: 500px;
+}
+#lable{
+   width: 100%;
+   display: inline-block;
+   text-align: center;
+   margin-top: 250px; 
+}
+#lable_name{
+    position: relative;
+    font-size: 27px;
+    margin-bottom: 35px; 
+}
+#lable_name::before{
+    content: "";
+    position: absolute;
+    left: 40%;
+    bottom: -20px;
+    width: 300px;
+    height: 1px;
+    background: #c8c6c5; 
+}
+#lable_price{
+    font-size: 17px;
 }
 .driving{
     width: 100%;

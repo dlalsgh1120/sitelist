@@ -18,7 +18,7 @@ $(document).ready(function(){
     var scrollTop, headerHeight;
     var html = "";
     var text = "";
-    var id, name, src, src2;
+    var id, name, src, src2, price;
     var index = 0;
     var item;
     var length = secBox.length;
@@ -70,8 +70,9 @@ $(document).ready(function(){
             }
         });
 
-        $('.lookImg01').eq(index).css('left', '0');
+        $('.lookImg').eq(index).css('left', '0');
         $('#lable_name').html(item[0].name);
+        $('#lable_price').html(item[0].price);
     };
 
     
@@ -87,14 +88,12 @@ $(document).ready(function(){
         html = "";
         for(var i in secBox){
             txt = `
-                <div class= "itemImg">
-                    <div class="lookImg01 lookWear_left">
-                        <img class="lookImg01" src="img/${secBox[i].src}">
+                    <div class="lookImg lookWear_left">
+                        <img class="lookImg_iner" src="img/${secBox[i].src}">
                     </div>
-                    <div class="lookImg01 lookWear_right">
-                        <img class="lookImg01" src="img/${secBox[i].src2}">
+                    <div class="lookImg lookWear_right">
+                        <img class="lookImg_iner" src="img/${secBox[i].src2}">
                     </div>
-                </div>
             `;
             html = html + txt;
         }
@@ -104,23 +103,24 @@ $(document).ready(function(){
     function setLable(_idx){
         var lable = secBox[_idx].name;
         $('#lable_name').html(lable);
+        $('#lable_price').html(lable);
     }
     function next(){
-        $('.itemImg').eq(index).animate({
+        $('.lookImg').eq(index).animate({
             left: "-100%"
         }, timer);
         index++;
         index = index%length;
         setLable(index);
 
-        $('.itemImg').eq(index).css({
+        $('.lookImg').eq(index).css({
             left: "100%"
         }). animate({
             left: "0%"
         }, timer);
     }
     function prev(){
-        $('.itemImg').eq(index).animate({
+        $('.lookImg').eq(index).animate({
             left: '100%'
         }, timer);
 
@@ -130,7 +130,7 @@ $(document).ready(function(){
         }
         setLable(index);
 
-		$('.itemImg').eq(index).css({
+		$('.lookImg').eq(index).css({
 			left: '-100%'
 		}).animate({
 			left: '0%'
