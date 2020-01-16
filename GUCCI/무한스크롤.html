@@ -1,0 +1,265 @@
+<html html>
+<head>
+    <style>
+        
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+</head>
+<body>
+	<div class="container"></div>
+	<script>
+		$(document).ready(function(){
+			var view = [];
+			var index = 0;
+			var items = [
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름1'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름2'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름3'},
+				 {id:1, name:'이름4'},
+				 {id:1, name:'이름4'},
+				 {id:1, name:'이름4'},
+				 {id:1, name:'이름4'},
+				 {id:1, name:'이름4'},
+				 {id:1, name:'이름4'},
+				 {id:1, name:'이름4'},
+				 {id:1, name:'이름4'},
+			 ];
+
+			 var windowHeight = $(window).height();
+			 var length = items.length;
+			 var end;
+			 var html = "";
+			 var text = "";
+
+			 $(window).scroll(function(){
+				  var scroll_top = $(window).scrollTop(); // 화면 위 라인의 높이
+				  var documentHeight = $(document).height();
+				  var scrollHeight = scroll_top + windowHeight;
+
+				//   console.log('scroll top : ', scroll_top);
+				//   console.log('window height : ', windowHeight);
+				//   console.log('document height : ', documentHeight);
+				//   console.log('내가 스크롤 한 값 + 브라우저 높이 : ', scrollHeight);
+				//   console.log('================================');
+				  
+				  if(scrollHeight == documentHeight){
+						// for(var i = 0; i<10; i++){
+						// 	 $("<h1>Infinity Scroll</h1>").css("color","red").appendTo("body");
+						// }
+						console.log('닿았따');
+						console.log('현재 보여지는 item 수는?' , index);
+						addItem(index, 20);
+				  }
+			 });
+
+			addItem(index, 20)
+
+			function addItem(start, add){
+				html = "";
+				end = start + 20;
+				if(end > length){
+					end = length;
+				}
+				for(var i = start; i < end; i++){
+					index++;
+					text = `
+						<div class='item'>
+							<h1>${items[i].name}</h1>
+						</div>
+					`;
+					html += text;
+				}
+
+				$('.container').append(html);
+			 }
+		});
+  </script>
+</body>
+
+</html>
