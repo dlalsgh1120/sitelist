@@ -12,19 +12,16 @@ $(document).ready(function(){
         {id: 10, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img010",src2:"woman_wear_img010", type: true},
         {id: 11, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img011",src2:"woman_wear_img011", type: false},
         {id: 12, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦1,350,000',src:"woman_nav_img012",src2:"woman_wear_img012", type: false},
-        {id: 13, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img013_wear",src2:"woman_wear_img013", type: false},
-        {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img014_wear",src2:"woman_wear_img014", type: false}
+        {id: 13, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img013",src2:"woman_img013", type: false},
+        {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img014",src2:"woman_wear_img014", type: false}
     ];
     var scrollTop, headerHeight;
-    var html = "";
-    var text = "";
-    var id, name,src, src2,src3, src4,src5,src6,price;
-    var index = 0;
-    var item;
-    var itemIndex;
-	var viewIndex;
-    var length = 3;
+    var animation = false;
     var timer = 500;
+    var itemIndex;
+    var viewIndex;
+    var length = 3;
+    
     $(document).scroll(function(){
         scrollTop = $(window).scrollTop();
         
@@ -41,100 +38,99 @@ $(document).ready(function(){
         }
     });
     document.getElementById('main_logo').onclick = function(){
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
     }; 
     document.getElementById('n_span01').onclick = function(){
-        window.location.href = "what_nav/what_nav.html";
+        window.location.href = "../what_nav/what_nav.html";
     };
     document.getElementById('n_span02').onclick = function(){
-        window.location.href = "woman/woman_nav.html";
+        window.location.href = "../woman/woman_nav.html";
     }; 
     document.getElementById('n_span03').onclick = function(){
-        window.location.href = "man_nav.html";
+        window.location.href = "../man/man_nav.html";
     }; 
     document.getElementById('n_span04').onclick = function(){
-        window.location.href = "gift_nav.html";
+        window.location.href = "../gift_nav.html";
     };
     document.getElementById('n_span05').onclick = function(){
-        window.location.href = "acc_wacth.html";
+        window.location.href = "../watch_acc/acc_wacth.html";
     };
     document.getElementById('n_span06').onclick = function(){
-        window.location.href = "perfume_nav.html";
+        window.location.href = "../perfume/perfume_nav.html";
     };
+
 
     getUrl();
     function getUrl(){
         var pageUrl = window.location.search.substring(1);
         var value = pageUrl.split('=')[1] * 1;
-        item = secBox.filter(function(res){
-            if(res.id === value){
-                return res.id === value;
-            }
+        var item = secBox.filter(function(res){
+            return res.id === value;
+            
         });
 
-        $('.lookImg').eq(index).css('left', '0');
-        $('#lable_name').html(item[0].name);
-        $('#lable_price').html(item[0].price);
+
+        // $('#slide_img01').attr('src', 'img/'+item[0].src+'.jpg');
+        // $('#slide_img02').attr('src2', 'img/'+item[0].src2 +'.jpg');
+        // $('#slide_img03').attr('src4', 'img/'+item[0].src4);
+        // $('#slide_img04').attr('src5', 'img/'+item[0].src5);
+        // $('#slide_img05').attr('src6', 'img/'+item[0].src6);
+        $('.sec_name').html(item[0].name);
+        $('.sec_price').html(item[0].price);
     };
 
-    for(var i in secBox){
-        id = secBox[i].id;
-        name = secBox[i].name;
-        desc = secBox[i].desc;
-        src2 = secBox[i].src2;
-        src3 = src2 + "_hover";
-        src4 = src3 + "02";
-        src5 = src3 + "03";
-        src6 = src3 + "04";
-
-        txt = `
-            <div class="sec_iner">
-                <input type="button" value="〈" class="btn" id="btn_left">
-                <input type="button" value="〉" class="btn" id="btn_right">
-                <div class="wrapper">
-					<div class="slide">
-                        <div class="iner_slide slide_left01">
-                            <img src="img/${src2}.jpg">
-                        </div>
-                        <div class="iner_slide slide_right01">
-                            <img src="img/${src3}.jpg">
-                        </div>
-					</div>
-					<div class="slide">
-                        <div class="iner_slide slide_left02">
-                            <img src="img/${src4}.jpg">
-                        </div>
-                        <div class="iner_slide slide_right02">
-                            <img src="img/${src5}.jpg">
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="iner_slide">
-                            <img src="img/${src6}.jpg">
-                        </div>
-                    </div>
-				</div>
-            </div>
-        `;
-        html += txt;
-    }
-    $('.wear_look').html(html);
 
     viewIndex = 0;
     $(this).find('.slide').eq(0).css({
         left: 0
     });
     $(document).on('click', '#btn_right', function(){
+        if(animation){
+            return;
+        }
+        animation = true;
+
         itemIndex = $(this).parent().parent().index();
-        $('.sec_iner').eq(itemIndex).find('.slide').eq(viewIndex).animate({
+        $('.main_box').eq(itemIndex).find('.slide').eq(viewIndex).animate({
             left: '-100%'
         }, timer);
         viewIndex++;
         viewIndex = viewIndex % length;
-        $('.sec_iner').eq(itemIndex).find('.slide').eq(viewIndex).css({
+        $('.main_box').eq(itemIndex).find('.slide').eq(viewIndex).css({
             left: '100%'
         }).animate({
             left: '0'
-        }, timer);
+        }, {
+            duration: timer,
+            complete:function(){
+                animation = false;
+            }
+        });
     });
+    $(document).on('click', '#btn_left', function(){
+        if(animation){
+            return;
+        }
+        animation = true;
+
+        itemIndex = $(this).parent().parent().index();
+        $('.main_box').eq(itemIndex).find('.slide').eq(viewIndex).animate({
+            left:'100%'
+        }, timer);
+        viewIndex--;
+        if (viewIndex < 0) {
+            viewIndex = length - 1;
+        }
+        $('.main_box').eq(itemIndex).find('.slide').eq(viewIndex).css({
+            left:'-100%'
+        }).animate({
+            left: '0%'
+        },{
+            duration: timer,
+            complete:function(){
+                animation = false;
+            }
+        });
+    });
+
 }); 

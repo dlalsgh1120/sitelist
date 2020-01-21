@@ -200,12 +200,9 @@ main{
 }
 .wear_look{
     width: 100%;
+    height: 800px;
     left: 100%;
     text-align: center;
-}
-.sec_iner{
-    position: relative;
-    height: 800px;
     overflow: hidden;
 }
 .btn{
@@ -219,7 +216,7 @@ main{
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 10000;
+    z-index: 9999;
 }
 #btn_left{
     left: 0;
@@ -238,39 +235,46 @@ main{
     top: 0;
     width: 100%;
     height: 100%;
-}
-.slide:nth-child(1){
-    left: 0;
-}
-.slide:nth-child(3){
-    width: 100%;
+    z-index: 99;
 }
 .iner_slide{
     position: absolute;
-}
-.slide_left01, .slide_left02{
-    left: -140px;
     top: 0;
+    margin-top: 70px; 
+}
+.iner_slide img{
+    width: auto;
 }
 .slide_left01{
-    width: 800px;
-}
-.slide_left02{
-    width: 800px;
+    left: 0;
 }
 .slide_right01{
-    width: 600px;
     right: 0;
-    top: 130px;
-    z-index: 99;
 }
-.slide_right02{
-    width: 800px;
-    right: -160px;
-    top: 0;
-    z-index: 99;
+.sec_txt{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 999;
 }
-
+.sec_txt::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #999;
+    margin-top: 50px; 
+}
+.sec_txt .sec_name{
+    font-size: 22px;
+    margin-bottom: 30px; 
+}
+.sec_txt .sec_price{
+    font-size: 18px;
+}
 footer{
     position: relative;
     width: 100%;

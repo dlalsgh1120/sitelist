@@ -36,10 +36,10 @@ $(document).ready(function(){
         window.location.href = "../perfume_nav.html";
     };
     document.getElementById('2020_look').onclick = function(){
-        window.location.href = "../what_nav_look.html";
+        window.location.href = "../what_nav/what_nav_look.html";
     };
     document.getElementById('hollsbit').onclick = function(){
-        window.location.href = "../hollsbit.html";
+        window.location.href = "../what_nav/hollsbit.html";
     };
     document.getElementById('index_maiin').onclick = function(){
         window.location.href = "../index.html";

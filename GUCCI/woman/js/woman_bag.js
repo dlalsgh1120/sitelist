@@ -24,6 +24,7 @@ $(document).ready(function(){
     var viewIndex;
     var timer = 500;
     var length = 3;
+    var animation = false;
 
     $(document).scroll(function(){
         scrollTop = $(window).scrollTop();
@@ -50,16 +51,16 @@ $(document).ready(function(){
         window.location.href = "../woman/woman_nav.html";
     }; 
     document.getElementById('n_span03').onclick = function(){
-        window.location.href = "../man_nav.html";
+        window.location.href = "../man/man_nav.html";
     }; 
     document.getElementById('n_span04').onclick = function(){
         window.location.href = "../gift_nav.html";
     };
     document.getElementById('n_span05').onclick = function(){
-        window.location.href = "../acc_wacth.html";
+        window.location.href = "../watch_acc/acc_wacth.html";
     };
     document.getElementById('n_span06').onclick = function(){
-        window.location.href = "../perfume_nav.html";
+        window.location.href = "../perfume/perfume_nav.html";
     };
     for(var i in secBox){
         id = secBox[i].id;
@@ -120,32 +121,49 @@ $(document).ready(function(){
     }
     $('.sec_box').html(html);
 
-    $(document).on('click', '.back', function(){
-        var itemId = $(this).siblings('.itemId')[0].value;
-        // window.location = "woman_wear_look.html?itemId=" + itemId;
+    $(document).on('click', '.wrapper', function(){
+        var itemId = $(this).parent().siblings('.itemId')[0].value;
+        window.location = "woman_wear_look.html?itemId=" + itemId;
     });
 
     $(document).on('mouseover', '.sec_inr', function(){
         viewIndex = 0;
+        $(this).find('.slide').css({
+            left: '100%'
+        });
         $(this).find('.slide').eq(0).css({
             left: 0
         });
     });
 
     $(document).on('click', '#right_btn', function(){
+        if(animation){
+            return;
+        }
+        animation = true;
         itemIndex = $(this).parent().parent().index();
         $('.sec_inr').eq(itemIndex).find('.slide').eq(viewIndex).animate({
             left: "-100%"
         }, timer);
         viewIndex++;
-        viewIndex = viewIndex % length;
+        
+        viewIndex = viewIndex % length;i
         $('.sec_inr').eq(itemIndex).find('.slide').eq(viewIndex).css({
             left: "100%"
         }).animate({
            left: "0" 
-        }, timer);
+        }, {
+            duration: timer,
+            complete:function(){
+                animation = false;
+            }
+        });
     });
     $(document).on('click', '#left_btn', function(){
+        if(animation){
+            return;
+        }
+        animation = true;
         itemIndex = $(this).parent().parent().index();
         $('.sec_inr').eq(itemIndex).find('.slide').eq(viewIndex).animate({
             left:'100%'
@@ -158,7 +176,12 @@ $(document).ready(function(){
             left:'-100%'
         }).animate({
             left: '0%'
-        }, timer);
+        }, {
+            duration: timer,
+            complete:function(){
+                animation = false;
+            }
+        });
     });
 
     
