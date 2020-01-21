@@ -61,22 +61,44 @@ $(document).ready(function(){
 
 
     getUrl();
+    var html = '';
     function getUrl(){
         var pageUrl = window.location.search.substring(1);
         var value = pageUrl.split('=')[1] * 1;
         var item = secBox.filter(function(res){
             return res.id === value;
-            
         });
 
+        console.log(item[0].src);
+        console.log(item[0].src2);
 
-        // $('#slide_img01').attr('src', 'img/'+item[0].src+'.jpg');
-        // $('#slide_img02').attr('src2', 'img/'+item[0].src2 +'.jpg');
-        // $('#slide_img03').attr('src4', 'img/'+item[0].src4);
-        // $('#slide_img04').attr('src5', 'img/'+item[0].src5);
-        // $('#slide_img05').attr('src6', 'img/'+item[0].src6);
+        html = `
+            <div class="slide">
+                <div class="iner_slide slide_left01">
+                    <img src='img/${item[0].src}.jpg'>
+                </div> 
+                <div class="iner_slide slide_right01">
+                    <img src='img/${item[0].src2}.jpg'>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="iner_slide slide_left01">
+                    <img src='img/${item[0].src}.jpg'>
+                </div>
+                <div class="iner_slide slide_right01">
+                    <img src='img/${item[0].src2}.jpg'>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="iner_slide">
+                    <img src='img/${item[0].src}.jpg'>
+                </div>
+            </div>`;
+
         $('.sec_name').html(item[0].name);
         $('.sec_price').html(item[0].price);
+        
+        $('.wrapper').html(html);
     };
 
 
