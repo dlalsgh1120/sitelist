@@ -28,7 +28,7 @@ $(document).ready(function(){
         window.location.href = "../man/man_nav.html";
     }; 
     document.getElementById('n_span04').onclick = function(){
-        window.location.href = "../gift_nav.html";
+        window.location.href = "../gift/gift_nav.html";
     };
     document.getElementById('n_span05').onclick = function(){
         window.location.href = "acc_wacth.html";
@@ -41,6 +41,9 @@ $(document).ready(function(){
     };
     document.getElementById('woman_acc_sliver').onclick = function(){
         window.location.href = "../watch_acc/acc_sliver.html";
+    };
+    document.getElementById('woman_acc_gold').onclick = function(){
+        window.location.href = "../watch_acc/acc_gold.html";
     };
     document.getElementById('woman_watch').onclick = function(){
         window.location.href = "../woman/woman_watch.html";

@@ -35,4 +35,13 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "../perfume/perfume_nav.html";
     };
+    document.getElementById('gift_service').onclick = function(){
+        window.location.href = "../gift/gift_service.html";
+    };
+    document.getElementById('woman_gift').onclick = function(){
+        window.location.href = "../woman/woman_nav.html";
+    };
+    document.getElementById('man_gift').onclick = function(){
+        window.location.href = "../man/man_nav.html";
+    };
 });
