@@ -38,4 +38,7 @@ $(document).ready(function(){
     document.getElementById('holiy_day').onclick = function(){
         window.location.href = "../gift/gift_nav.html";
     };
+    document.getElementById('initials').onclick = function(){
+        window.location.href = "../gift/gift_wallet.html";
+    };
 });
