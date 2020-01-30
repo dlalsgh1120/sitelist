@@ -63,7 +63,7 @@ $(document).ready(function(){
         window.location.href = "../man/man_nav.html";
     }; 
     document.getElementById('n_span04').onclick = function(){
-        window.location.href = "../gift_nav.html";
+        window.location.href = "../gift/gift_nav.html";
     };
     document.getElementById('n_span05').onclick = function(){
         window.location.href = "../watch_acc/acc_wacth.html";

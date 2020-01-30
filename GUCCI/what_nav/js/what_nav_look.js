@@ -25,16 +25,16 @@ $(document).ready(function(){
         window.location.href = "../woman/woman_nav.html";
     }; 
     document.getElementById('n_span03').onclick = function(){
-        window.location.href = "../man_nav.html";
+        window.location.href = "../man/man_nav.html";
     }; 
     document.getElementById('n_span04').onclick = function(){
-        window.location.href = "../gift_nav.html";
+        window.location.href = "../gift/gift_nav.html";
     };
     document.getElementById('n_span05').onclick = function(){
-        window.location.href = "../acc_wacth.html";
+        window.location.href = "../watch_acc/acc_wacth.html";
     };
     document.getElementById('n_span06').onclick = function(){
-        window.location.href = "../perfume_nav.html";
+        window.location.href = "../perfume/perfume_nav.html";
     };
     document.getElementById('fall_winter_look').onclick = function(){
         window.location.href = "what_fallWinter_look.html";

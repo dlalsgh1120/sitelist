@@ -35,4 +35,10 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "../perfume/perfume_nav.html";
     };
+    document.getElementById('holiy_day').onclick = function(){
+        window.location.href = "../gift/gift_nav.html";
+    };
+    document.getElementById('initials').onclick = function(){
+        window.location.href = "../gift/gift_wallet.html";
+    };
 });

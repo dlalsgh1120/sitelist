@@ -19,12 +19,12 @@ $(document).ready(function(){
         {id: 17, name: "[G-타임리스] 27mm 시계", desc:"쇼핑하기",  price: '￦1,278,000',src:"woman_watch_img017", type: false},
         {id: 18, name: "[G-타임리스] 시계, 38mm", desc:"쇼핑하기",  price: '￦2,508,000',src:"woman_watch_img018", type: false},
         {id: 19, name: "[G-타임리스] 시계, 42mm", desc:"쇼핑하기",  price: '￦2,838,000',src:"woman_watch_img019", type: false},
-        {id: 20, name: "[G-타임리스] 시계, 38mm", desc:"쇼핑하기",  price: '￦1,278,000',src:"woman_watch_img020", type: false},
+        {id: 20, name: "[G-타임리스] 시계, 38mm", desc:"쇼핑하기",  price: '￦1,278,000',src:"woman_watch_img020", type: false}
     ];
     var scrollTop, headerHeight;
-    var id, name, desc, src, src2,src3,src4,type, price;
+    var id, name, desc, src, src2,type, price;
     var html = "";
-    var text= "";
+    var txt= "";
 
     $(document).scroll(function(){
         scrollTop = $(window).scrollTop();
@@ -54,7 +54,7 @@ $(document).ready(function(){
         window.location.href = "../man/man_nav.html";
     }; 
     document.getElementById('n_span04').onclick = function(){
-        window.location.href = "../gift_nav.html";
+        window.location.href = "../gift/gift_nav.html";
     };
     document.getElementById('n_span05').onclick = function(){
         window.location.href = "../watch_acc/acc_wacth.html";
