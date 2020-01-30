@@ -140,6 +140,9 @@ $(document).ready(function(){
     var item02;
     function getUrl(){
         var pageUrl = window.location.search.substring(1);
+        if(!pageUrl){
+            window.location.href = "woman_wear.html";
+        }
         var value = pageUrl.split('=')[1] * 1;
         item = secBox.filter(function(res){
             return res.id === value;
