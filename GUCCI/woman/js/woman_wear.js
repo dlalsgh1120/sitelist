@@ -4,12 +4,12 @@ $(document).ready(function(){
         {id: 2, name: "Disney x Gucci 실크 파자마 팬츠", desc:"쇼핑하기",price: '￦2,150,000', src:"woman_nav_img02",src2:"woman_wear_img02", type: false},
         {id: 3, name: "울 실크 팬츠", desc:"쇼핑하기", price: '￦1,600,000',src:"woman_nav_img03", src2:"woman_wear_img03",type: false},
         {id: 4, name: "캐디 울 실크 숏 드레스", desc:"쇼핑하기", price: '￦2,700,000',src:"woman_nav_img04",src2:"woman_wear_img04", type: false},
-        {id: 5,name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000',src:"woman_nav_img05",src2:"woman_wear_img05", type: true},
+        {id: 5,name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000',src:"woman_nav_img05", type: true},
         {id: 6, name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000', src:"woman_nav_img06",src2:"woman_wear_img06", type: false},
         {id: 7, name: "홀스슈 디테일의 트위드 스커트", desc:"쇼핑하기",  price: '￦2,700,000',src:"woman_nav_img07",src2:"woman_wear_img07",type: false},
         {id: 8, name: "라이언 헤드 토글 디테일의 트위드 재킷", desc:"쇼핑하기", price: '￦4,000,000', src:"woman_nav_img08",src2:"woman_wear_img08", type: false},
         {id: 9, name: "Disney x Gucci 저지 드레스", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img09", src2:"woman_wear_img09",type: false},
-        {id: 10, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img010",src2:"woman_wear_img010", type: true},
+        {id: 10, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img010", type: true},
         {id: 11, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img011",src2:"woman_wear_img011", type: false},
         {id: 12, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦1,350,000',src:"woman_nav_img012",src2:"woman_wear_img012", type: false},
         {id: 13, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img013",src2:"woman_img013", type: false},
@@ -25,6 +25,7 @@ $(document).ready(function(){
     var timer = 500;
     var length = 3;
     var animation = false;
+    var backBox = "";
 
     var index = 0;
     var windowHeight = $(window).height();
@@ -111,9 +112,42 @@ $(document).ready(function(){
         price = secBox[i].price;
         type = secBox[i].type;
 
-        typeBox = 'Wearbox1';
-        if(type === true){
+        backBox = '';
+
+        if(type){
             typeBox = 'Wearbox2';
+        }
+        else{
+            typeBox = "Wearbox1";
+            backBox = 
+            `<div class="back">
+                <input type="button" value="〈" id="left_btn" class="btn">
+                <input type="button" value="〉" id="right_btn" class="btn">
+                <div class="wrapper">
+                    <div class="slide">
+                        <img src="img/${src2}.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="img/${src3}.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="img/${src4}.jpg">
+                    </div>
+                </div>
+                <div class="like_icon">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="sec_inr_name">
+                    ${name}
+                </div>
+                <div class="sec_inr_price">
+                    ${price}
+                </div>
+                <div class="sec_inr_desc">
+                    ${desc}
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>`;
         }
 
         txt = `
@@ -125,34 +159,7 @@ $(document).ready(function(){
                 <div class="like_icon">
                     <i class="far fa-heart"></i>
                 </div>
-                <div class="back">
-                    <input type="button" value="〈" id="left_btn" class="btn">
-                    <input type="button" value="〉" id="right_btn" class="btn">
-                    <div class="wrapper">
-                        <div class="slide">
-                            <img src="img/${src2}.jpg">
-                        </div>
-                        <div class="slide">
-                            <img src="img/${src3}.jpg">
-                        </div>
-                        <div class="slide">
-                            <img src="img/${src4}.jpg">
-                        </div>
-                    </div>
-                    <div class="like_icon">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    <div class="sec_inr_name">
-                        ${name}
-                    </div>
-                    <div class="sec_inr_price">
-                        ${price}
-                    </div>
-                    <div class="sec_inr_desc">
-                        ${desc}
-                        <i class="fas fa-angle-right"></i>
-                    </div>
-                </div>
+                ${backBox}
             </div>
         `;
         html = html + txt;
@@ -164,7 +171,7 @@ $(document).ready(function(){
         window.location = "woman_wear_look.html?itemId=" + itemId;
     });
 
-    $(document).on('mouseover', '.sec_inr', function(){
+    $(document).on('mouseover', '.Wearbox1', function(){
         viewIndex = 0;
         $(this).find('.slide').css({
             left: '100%'
