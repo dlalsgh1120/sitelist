@@ -38,6 +38,7 @@ $(document).ready(function(){
     var itemIndex;
     var viewIndex;
     var timer = 500;
+    // length는 해당 요소를 잡아서 해주세요. $('.box').length; 이런식으로.
     var length = 3;
     var animation = false;
     var backBox = "";
@@ -64,7 +65,11 @@ $(document).ready(function(){
 
 
         var scroll_top = $(window).scrollTop();
-        var documentHeight = $(document).height()-50;
+
+        // 기존 -50으로 해놓고 한 번 체크해보고 -700으로 하고 체크해보세요. 차이점 알거에요.
+        // 그리고 700은 footer의 높이를 코딩으로 구해서 대체해보세요. $('footer').height();
+        // height만 쓰면 padding 값이 더해지지 않으니까 참고하세요.
+        var documentHeight = $(document).height() - 700;
         var scrollHeight = scroll_top + windowHeight;
         
         if(scrollHeight > documentHeight){
@@ -82,7 +87,6 @@ $(document).ready(function(){
       }
       for(var i = start; i < end; i++){
           index++;
-        for(var i in secBox){
             id = secBox[i].id;
             name = secBox[i].name;
             desc = secBox[i].desc;
@@ -144,7 +148,6 @@ $(document).ready(function(){
                 </div>
             `;
             html = html + txt;
-        }
       }
       $('.sec_box').append(html);
    }
