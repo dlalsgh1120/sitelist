@@ -138,8 +138,12 @@ $(document).ready(function(){
 
     getUrl();
     var html = '';
+    var txt = '';
+    var txt2 = '';
     var item;
     var item02;
+    var itemIdx = 0;
+
     function getUrl(){
         var pageUrl = window.location.search.substring(1);
         if(!pageUrl){
@@ -152,38 +156,84 @@ $(document).ready(function(){
         item02 = detailItem.filter(function(res){
             return res.item_id === value;
         });
-        console.log(item02);
 
-        // console.log(item[0].src);
-        // console.log(item[0].src2);
+        var  filterDetail = detailItem.filter(function(res){
+            return res.item_id === value;
+        });
 
-        html = `
-            <div class="slide">
-                <div class="iner_slide slide_left01">
-                    <img src='img/${item[0].src}.jpg'>
-                </div> 
-                <div class="iner_slide slide_right01">
-                    <img src='img/${item[0].src2}.jpg'>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="iner_slide slide_left01">
-                    <img src='img/${item[0].src3}.jpg'>
-                </div>
-                <div class="iner_slide slide_right01">
-                    <img src='img/${item[0].src4}.jpg'>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="iner_slide full_img">
-                    <img src='img/${item[0].src5}.jpg'>
-                </div>
-            </div>`;
+        console.log(filterDetail);
+        var filterDetailLength = filterDetail.length;
+        var slideLength = Math.ceil(filterDetailLength/2);
+        var slide =  `<div class="slide"></div>`;
+        html = '';
+        txt = '';
+
+        for(var i = 0; i< slideLength; i++){
+            html += slide;
+        }
+
+        $('.wrapper').html(html);
+
+        itemIdx = 0; 
+
+        for(var i = 0; i<slideLength; i++){
+            var front = itemIdx;
+            var back = itemIndex+1;
+            if( i === slideLength - 1 && slideLength%2 === 1 ){
+                txt = `
+                    <div class="iner_slide full_img">
+                        <img src='img/${filterDetail[front].src}'>
+                    </div>
+                `;
+                $('.wrapper .slide').eq(i).append(txt);
+            } else {
+                txt = `
+                    <div class="iner_slide slide_left01">
+                        <img src='img/${filterDetail[front].src}'>
+                    </div>`;
+                txt2 = `
+                    <div class="iner_slide slide_right01">
+                        <img src='img/${filterDetail[back].src}'>
+                    </div>`;
+                
+                $('.wrapper .slide').eq(i).append(txt);
+                $('.wrapper .slide').eq(i).append(txt2);
+            }
+            itemIdx = itemIdx + 2;
+        }
+
+        // html = `
+
+        // `;
+        // console.log(filterDetailLength);
+
+
+
+        // html = `
+        //     <div class="slide">
+        //         <div class="iner_slide slide_left01">
+        //             <img src='img/${item[0].src}.jpg'>
+        //         </div> 
+        //         <div class="iner_slide slide_right01">
+        //             <img src='img/${item[0].src2}.jpg'>
+        //         </div>
+        //     </div>
+        //     <div class="slide">
+        //         <div class="iner_slide slide_left01">
+        //             <img src='img/${item[0].src3}.jpg'>
+        //         </div>
+        //         <div class="iner_slide slide_right01">
+        //             <img src='img/${item[0].src4}.jpg'>
+        //         </div>
+        //     </div>
+        //     <div class="slide">
+        //         <div class="iner_slide full_img">
+        //             <img src='img/${item[0].src5}.jpg'>
+        //         </div>
+        //     </div>`;
 
         $('.sec_name').html(item[0].name);
         $('.sec_price').html(item[0].price);
-        
-        $('.wrapper').html(html);
     };
 
 

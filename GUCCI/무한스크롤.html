@@ -219,8 +219,8 @@
 
 			 $(window).scroll(function(){
 				  var scroll_top = $(window).scrollTop(); // 화면 위 라인의 높이
-				  var documentHeight = $(document).height();
-				  var scrollHeight = scroll_top + windowHeight-50;
+				  var documentHeight = $(document).height() - 50;
+				  var scrollHeight = scroll_top + windowHeight;
 
 				//   console.log('scroll top : ', scroll_top);
 				//   console.log('window height : ', windowHeight);
@@ -228,10 +228,10 @@
 				//   console.log('내가 스크롤 한 값 + 브라우저 높이 : ', scrollHeight);
 				//   console.log('================================');
 				  
-				  if(scrollHeight == documentHeight){
-						for(var i = 0; i<10; i++){
-							 $("<h1>Infinity Scroll</h1>").css("color","red").appendTo("body");
-						}
+				  if(scrollHeight > documentHeight){
+						// for(var i = 0; i<10; i++){
+						// 	 $("<h1>Infinity Scroll</h1>").css("color","red").appendTo("body");
+						// }
 						console.log('닿았따');
 						console.log('현재 보여지는 item 수는?' , index);
 						addItem(index, 20);
