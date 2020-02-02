@@ -275,15 +275,16 @@ section{
 }
 .Wearbox1{
     width: calc(100% / 4);
+    cursor: pointer;
 }
 .Wearbox2{
     width: calc(100% / 2);
     height: 100%;
 }
-.Wearbox2:nth-child(5) .front{
+.Wearbox2:nth-child(5) .front, .Wearbox2:nth-child(19) .front, .Wearbox2:nth-child(24) .front{
     padding-top: 0;
 }
-.Wearbox2:nth-child(5) .like_icon{
+.Wearbox2:nth-child(5) .like_icon, .Wearbox2:nth-child(19) .like_icon, .Wearbox2:nth-child(24) .like_icon{
     display: none;
 }
 .Wearbox2:nth-child(10) .front{
@@ -296,7 +297,6 @@ section{
     height: 500px;
     background: #e7e7e7;
     margin: 0 auto;
-    cursor: pointer;
     padding-top: 20px; 
 }
 .front img{
@@ -310,7 +310,6 @@ section{
     width: 100%;
     height: 500px;
     background: #fff;
-    cursor: pointer;
     padding-bottom: 20px; 
 }
 .back img{

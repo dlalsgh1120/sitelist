@@ -36,6 +36,9 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "../perfume/perfume_nav.html";
     };
+    document.getElementById('n_span07').onclick = function(){
+        window.location.href = "../decoration/deco_nav.html";
+    };
     document.getElementById('man_wear').onclick = function(){
         window.location.href = "../man/man_wear.html";
     };

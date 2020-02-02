@@ -62,6 +62,9 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "../perfume/perfume_nav.html";
     };
+    document.getElementById('n_span07').onclick = function(){
+        window.location.href = "../decoration/deco_nav.html";
+    };
     for(var i in secBox){
         id = secBox[i].id;
         name = secBox[i].name;
@@ -73,20 +76,14 @@ $(document).ready(function(){
         price = secBox[i].price;
         type = secBox[i].type;
 
-        typeBox = 'Wearbox1';
+        backBox = '';
+
         if(type === true){
             typeBox = 'Wearbox2';
         }
-
-        txt = `
-            <div class="sec_inr ${typeBox}">
-                <input type="hidden" class="itemId" value="${id}">
-                <div class="front">
-                    <img src="img/${src}.jpg" class="${typeBox}">
-                </div>
-                <div class="like_icon">
-                    <i class="far fa-heart"></i>
-                </div>
+        else{
+            typeBox = 'Wearbox1';
+            backBox = `
                 <div class="back">
                     <input type="button" value="〈" id="left_btn" class="btn">
                     <input type="button" value="〉" id="right_btn" class="btn">
@@ -115,6 +112,19 @@ $(document).ready(function(){
                         <i class="fas fa-angle-right"></i>
                     </div>
                 </div>
+            `;
+        }
+
+        txt = `
+            <div class="sec_inr ${typeBox}">
+                <input type="hidden" class="itemId" value="${id}">
+                <div class="front">
+                    <img src="img/${src}.jpg" class="${typeBox}">
+                </div>
+                <div class="like_icon">
+                    <i class="far fa-heart"></i>
+                </div>
+                ${backBox}
             </div>
         `;
         html = html + txt;
@@ -126,7 +136,7 @@ $(document).ready(function(){
         window.location = "woman_wear_look.html?itemId=" + itemId;
     });
 
-    $(document).on('mouseover', '.sec_inr', function(){
+    $(document).on('mouseover', '.Wearbox1', function(){
         viewIndex = 0;
         $(this).find('.slide').css({
             left: '100%'

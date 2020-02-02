@@ -13,8 +13,23 @@ $(document).ready(function(){
         {id: 11, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img011",src2:"woman_wear_img011", type: false},
         {id: 12, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦1,350,000',src:"woman_nav_img012",src2:"woman_wear_img012", type: false},
         {id: 13, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img013",src2:"woman_img013", type: false},
-        {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img014",src2:"woman_wear_img014", type: false}
+        {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img014",src2:"woman_wear_img014", type: false},
+        {id: 15, name: "Disney x Gucci 실크 셔츠", desc:"쇼핑하기",price: '￦2,700,000', src:"woman_nav_img015",src2:"woman_wear_img015",type: false},
+        {id: 16, name: "Disney x Gucci 실크 파자마 팬츠", desc:"쇼핑하기",price: '￦2,150,000', src:"woman_nav_img016",src2:"woman_wear_img016", type: false},
+        {id: 17, name: "울 실크 팬츠", desc:"쇼핑하기", price: '￦1,600,000',src:"woman_nav_img017", src2:"woman_wear_img017",type: false},
+        {id: 18, name: "캐디 울 실크 숏 드레스", desc:"쇼핑하기", price: '￦2,700,000',src:"woman_nav_img018",src2:"woman_wear_img018", type: false},
+        {id: 19,name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000',src:"woman_nav_img019", type: true},
+        {id: 20, name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000', src:"woman_nav_img020",src2:"woman_wear_img020", type: false},
+        {id: 21, name: "홀스슈 디테일의 트위드 스커트", desc:"쇼핑하기",  price: '￦2,700,000',src:"woman_nav_img021",src2:"woman_wear_img021",type: false},
+        {id: 22, name: "라이언 헤드 토글 디테일의 트위드 재킷", desc:"쇼핑하기", price: '￦4,000,000', src:"woman_nav_img022",src2:"woman_wear_img022", type: false},
+        {id: 23, name: "Disney x Gucci 저지 드레스", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img023", src2:"woman_wear_img023",type: false},
+        {id: 24, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img024", type: true},
+        {id: 25, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img025",src2:"woman_wear_img025", type: false},
+        {id: 26, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦1,350,000',src:"woman_nav_img026",src2:"woman_wear_img026", type: false},
+        {id: 27, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img027",src2:"woman_img027", type: false},
+        {id: 28, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img028",src2:"woman_wear_img028", type: false}
     ];
+    
     var scrollTop, headerHeight;
     var id, name, desc, src, src2,src3,src4,type, price;
     var html = "";
@@ -49,35 +64,88 @@ $(document).ready(function(){
 
 
         var scroll_top = $(window).scrollTop();
-        var documentHeight = $(document).height();
+        var documentHeight = $(document).height()-50;
         var scrollHeight = scroll_top + windowHeight;
         
-        if(scrollHeight == documentHeight){
-              for(var i = 0; i<10; i++){
-    
-              }
-              console.log('닿았따');
-              console.log('현재 보여지는 item 수는?' , index);
-              addItem(index, 20);
+        if(scrollHeight > documentHeight){
+			console.log('현재 보여지는 item 수는?' , index);
+              addItem(index, 14);
         }
     });
 
-    addItem(index, 20)
-
-  function addItem(start, add){
+  addItem(index, 14);
+  function addItem(start, _add){
       html = "";
-      end = start + 20;
+      end = start + 14;
       if(end > length_scroll){
           end = length_scroll;
       }
       for(var i = start; i < end; i++){
           index++;
-          txt = `
-                
+        for(var i in secBox){
+            id = secBox[i].id;
+            name = secBox[i].name;
+            desc = secBox[i].desc;
+            src = secBox[i].src;
+            src2 = src + "_hover";
+            src3 = src2 + "02";
+            src4 = src2 + "03";
+            price = secBox[i].price;
+            type = secBox[i].type;
+    
+            backBox = '';
+    
+            if(type){
+                typeBox = 'Wearbox2';
+            }
+            else{
+                typeBox = "Wearbox1";
+                backBox = 
+                `<div class="back">
+                    <input type="button" value="〈" id="left_btn" class="btn">
+                    <input type="button" value="〉" id="right_btn" class="btn">
+                    <div class="wrapper">
+                        <div class="slide">
+                            <img src="img/${src2}.jpg">
+                        </div>
+                        <div class="slide">
+                            <img src="img/${src3}.jpg">
+                        </div>
+                        <div class="slide">
+                            <img src="img/${src4}.jpg">
+                        </div>
+                    </div>
+                    <div class="like_icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="sec_inr_name">
+                        ${name}
+                    </div>
+                    <div class="sec_inr_price">
+                        ${price}
+                    </div>
+                    <div class="sec_inr_desc">
+                        ${desc}
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>`;
+            }
+    
+            txt = `
+                <div class="sec_inr ${typeBox}">
+                    <input type="hidden" class="itemId" value="${id}">
+                    <div class="front">
+                        <img src="img/${src}.jpg" class="${typeBox}">
+                    </div>
+                    <div class="like_icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    ${backBox}
+                </div>
             `;
-          html += txt;
+            html = html + txt;
+        }
       }
-
       $('.sec_box').append(html);
    }
     document.getElementById('main_logo').onclick = function(){
@@ -101,70 +169,9 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "../perfume/perfume_nav.html";
     };
-    for(var i in secBox){
-        id = secBox[i].id;
-        name = secBox[i].name;
-        desc = secBox[i].desc;
-        src = secBox[i].src;
-        src2 = src + "_hover";
-        src3 = src2 + "02";
-        src4 = src2 + "03";
-        price = secBox[i].price;
-        type = secBox[i].type;
-
-        backBox = '';
-
-        if(type){
-            typeBox = 'Wearbox2';
-        }
-        else{
-            typeBox = "Wearbox1";
-            backBox = 
-            `<div class="back">
-                <input type="button" value="〈" id="left_btn" class="btn">
-                <input type="button" value="〉" id="right_btn" class="btn">
-                <div class="wrapper">
-                    <div class="slide">
-                        <img src="img/${src2}.jpg">
-                    </div>
-                    <div class="slide">
-                        <img src="img/${src3}.jpg">
-                    </div>
-                    <div class="slide">
-                        <img src="img/${src4}.jpg">
-                    </div>
-                </div>
-                <div class="like_icon">
-                    <i class="far fa-heart"></i>
-                </div>
-                <div class="sec_inr_name">
-                    ${name}
-                </div>
-                <div class="sec_inr_price">
-                    ${price}
-                </div>
-                <div class="sec_inr_desc">
-                    ${desc}
-                    <i class="fas fa-angle-right"></i>
-                </div>
-            </div>`;
-        }
-
-        txt = `
-            <div class="sec_inr ${typeBox}">
-                <input type="hidden" class="itemId" value="${id}">
-                <div class="front">
-                    <img src="img/${src}.jpg" class="${typeBox}">
-                </div>
-                <div class="like_icon">
-                    <i class="far fa-heart"></i>
-                </div>
-                ${backBox}
-            </div>
-        `;
-        html = html + txt;
-    }
-    $('.sec_box').html(html);
+    document.getElementById('n_span07').onclick = function(){
+        window.location.href = "../decoration/deco_nav.html";
+    };
 
     $(document).on('click', '.wrapper', function(){
         var itemId = $(this).parent().siblings('.itemId')[0].value;
