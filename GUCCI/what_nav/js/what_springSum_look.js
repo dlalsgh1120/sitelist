@@ -36,6 +36,9 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "../perfume/perfume_nav.html";
     };
+    document.getElementById('n_span07').onclick = function(){
+        window.location.href = "../decoration/deco_nav.html";
+    };
 
     var secBox = [
         {id: 1, name: "2019 프리폴", desc:"룩 확인하기", src:"what_springSum_look01.jpg", src2:"what_springSum_look01_hover.jpg"},

@@ -35,6 +35,9 @@ $(document).ready(function(){
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "../perfume/perfume_nav.html";
     };
+    document.getElementById('n_span07').onclick = function(){
+        window.location.href = "../decoration/deco_nav.html";
+    };
 
     var secBox = [
         {id: 1, name: "구찌 1955 홀스빗 숄더백", desc:"상품보기", src:"hollbit_bag01.png", src2:"hollbit_bag01_hover.jpg"},

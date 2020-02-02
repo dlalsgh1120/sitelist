@@ -48,6 +48,15 @@ $(document).ready(function(){
     document.getElementById('logo_click').onclick = function(){
         window.location.href = "index.html";
     }; 
+    document.getElementById('disney').onclick = function(){
+        window.location.href = "Disney/disney.html";
+    }; 
+    document.getElementById('disney_ready').onclick = function(){
+        window.location.href = "Disney/disney.html";
+    }; 
+    document.getElementById('small_disney').onclick = function(){
+        window.location.href = "Disney/disney.html";
+    }; 
     document.getElementById('n_span01').onclick = function(){
         window.location.href = "what_nav/what_nav.html";
     };
@@ -57,6 +66,9 @@ $(document).ready(function(){
     document.getElementById('n_span03').onclick = function(){
         window.location.href = "man/man_nav.html";
     }; 
+    document.getElementById('man_shose').onclick = function(){
+        window.location.href = "man/man_shose.html";
+    }; 
     document.getElementById('n_span04').onclick = function(){
         window.location.href = "gift/gift_nav.html";
     };
@@ -65,5 +77,14 @@ $(document).ready(function(){
     };
     document.getElementById('n_span06').onclick = function(){
         window.location.href = "perfume/perfume_nav.html";
+    };
+    document.getElementById('n_span07').onclick = function(){
+        window.location.href = "decoration/deco_nav.html";
+    };
+    document.getElementById('W_coll').onclick = function(){
+        window.location.href = "woman/woman_nav.html";
+    };
+    document.getElementById('M_coll').onclick = function(){
+        window.location.href = "man/man_nav.html";
     };
 });
