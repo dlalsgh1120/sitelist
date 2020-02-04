@@ -15,41 +15,41 @@ $(document).ready(function(){
         {id: 13, name: "스페셜 핏 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img013", type: false},
         {id: 14, name: "마스크 선글라스", desc:"쇼핑하기",  price: '￦860,000',src:"woman_glass_img014", type: false},
 
-        {id: 15, name: "직사각형 프레임 메탈 안경", desc:"쇼핑하기",price: '￦515,000', src:"woman_glass_img015",type: false},
-        {id: 16, name: "직사각형 프레임 메탈 선글라스", desc:"쇼핑하기",price: '￦515,000', src:"woman_glass_img016", type: false},
-        {id: 17, name: "스퀘어 아세테이트 선글라스", desc:"쇼핑하기", price: '￦480,000',src:"woman_glass_img017", type: false},
-        {id: 18, name: "스퀘어 아세테이트 선글라스", desc:"쇼핑하기", price: '￦770,000',src:"woman_glass_img018", type: false},
-        {id: 19, name: "라운드 메탈 선글라스", desc:"쇼핑하기", price: '￦600,000',src:"woman_glass_img019", type: false},
-        {id: 20, name: "라운드 메탈 선글라스", desc:"쇼핑하기", price: '￦600,000', src:"woman_glass_img020", type: false},
-        {id: 21, name: "라운드 아세테이트 선글라스", desc:"쇼핑하기",  price: '￦735,000',src:"woman_glass_img021",type: false},
-        {id: 22, name: "라운드 아세테이트 선글라스", desc:"쇼핑하기", price: '￦735,000', src:"woman_glass_img022", type: false},
-        {id: 23, name: "라운드 아세테이트 안경", desc:"쇼핑하기", price: '￦770,000',src:"woman_glass_img023", type: false},
-        {id: 24, name: "스퀘어 아세테이트 메탈 안경", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img024", type: false},
-        {id: 25, name: "스퀘어 아세테이트 메탈 안경", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img025", type: false},
-        {id: 26, name: "스페셜 핏 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img026", type: false},
-        {id: 27, name: "스페셜 핏 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img027", type: false},
-        {id: 28, name: "마스크 선글라스", desc:"쇼핑하기",  price: '￦860,000',src:"woman_glass_img028", type: false},
+        {id: 15, name: "별 모양 리벳의 마스크 선글라스", desc:"쇼핑하기",price: '￦1,200,000', src:"woman_glass_img015",type: false},
+        {id: 16, name: "캣아이 마스크 선글라스", desc:"쇼핑하기",price: '￦860,000', src:"woman_glass_img016", type: false},
+        {id: 17, name: "캣아이 마스크 선글라스", desc:"쇼핑하기", price: '￦860,000',src:"woman_glass_img017", type: false},
+        {id: 18, name: "스퀘어 아세테이트 메탈 선글라스", desc:"쇼핑하기", price: '￦535,000',src:"woman_glass_img018", type: false},
+        {id: 19, name: "스퀘어 아세테이트 메탈 선글라스", desc:"쇼핑하기", price: '￦535,000',src:"woman_glass_img019", type: false},
+        {id: 20, name: "에비에이터 아세테이트, 메탈 선글라스", desc:"쇼핑하기", price: '￦535,000', src:"woman_glass_img020", type: false},
+        {id: 21, name: "에비에이터 아세테이트, 메탈 선글라스", desc:"쇼핑하기",  price: '￦535,000',src:"woman_glass_img021",type: false},
+        {id: 22, name: "에비에이터 아세테이트 선글라스", desc:"쇼핑하기", price: '￦635,000', src:"woman_glass_img022", type: false},
+        {id: 23, name: "에비에이터 아세테이트 선글라스", desc:"쇼핑하기", price: '￦635,000',src:"woman_glass_img023", type: false},
+        {id: 24, name: "스페셜 핏 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦495,000',src:"woman_glass_img024", type: false},
+        {id: 25, name: "스페셜 핏 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦495,000',src:"woman_glass_img025", type: false},
+        {id: 26, name: "스페셜 핏 라운드 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img026", type: false},
+        {id: 27, name: "스페셜 핏 라운드 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img027", type: false},
+        {id: 28, name: "스퀘어 메탈 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img028", type: false},
 
-        {id: 29, name: "직사각형 프레임 메탈 안경", desc:"쇼핑하기",price: '￦515,000', src:"woman_glass_img029",type: false},
-        {id: 30, name: "직사각형 프레임 메탈 선글라스", desc:"쇼핑하기",price: '￦515,000', src:"woman_glass_img030", type: false},
-        {id: 31, name: "스퀘어 아세테이트 선글라스", desc:"쇼핑하기", price: '￦480,000',src:"woman_glass_img031", type: false},
-        {id: 32, name: "스퀘어 아세테이트 선글라스", desc:"쇼핑하기", price: '￦770,000',src:"woman_glass_img032", type: false},
-        {id: 33, name: "라운드 메탈 선글라스", desc:"쇼핑하기", price: '￦600,000',src:"woman_glass_img033", type: false},
-        {id: 34, name: "라운드 메탈 선글라스", desc:"쇼핑하기", price: '￦600,000', src:"woman_glass_img034", type: false},
-        {id: 35, name: "라운드 아세테이트 선글라스", desc:"쇼핑하기",  price: '￦735,000',src:"woman_glass_img035",type: false},
-        {id: 36, name: "라운드 아세테이트 선글라스", desc:"쇼핑하기", price: '￦735,000', src:"woman_glass_img036", type: false},
-        {id: 37, name: "라운드 아세테이트 안경", desc:"쇼핑하기", price: '￦770,000',src:"woman_glass_img037", type: false},
-        {id: 38, name: "스퀘어 아세테이트 메탈 안경", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img038", type: false},
-        {id: 39, name: "스퀘어 아세테이트 메탈 안경", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img039", type: false},
-        {id: 40, name: "스페셜 핏 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img040", type: false},
-        {id: 41, name: "스페셜 핏 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦600,000',src:"woman_glass_img041", type: false},
-        {id: 42, name: "마스크 선글라스", desc:"쇼핑하기",  price: '￦860,000',src:"woman_glass_img042", type: false},
+        {id: 29, name: "스퀘어 메탈 선글라스", desc:"쇼핑하기",price: '￦600,000', src:"woman_glass_img029",type: false},
+        {id: 30, name: "스퀘어 메탈 선글라스", desc:"쇼핑하기",price: '￦715,000', src:"woman_glass_img030", type: false},
+        {id: 31, name: "스퀘어 메탈 선글라스", desc:"쇼핑하기", price: '￦715,000',src:"woman_glass_img031", type: false},
+        {id: 32, name: "캣아이 아세테이트 선글라스", desc:"쇼핑하기", price: '￦685,000',src:"woman_glass_img032", type: false},
+        {id: 33, name: "캣아이 아세테이트 선글라스", desc:"쇼핑하기", price: '￦685,000',src:"woman_glass_img033", type: false},
+        {id: 34, name: "직사각형 메탈 선글라스", desc:"쇼핑하기", price: '￦550,000', src:"woman_glass_img034", type: false},
+        {id: 35, name: "직사각형 메탈 선글라스", desc:"쇼핑하기",  price: '￦550,000',src:"woman_glass_img035",type: false},
+        {id: 36, name: "직사각형 아세테이트 선글라스", desc:"쇼핑하기", price: '￦635,000', src:"woman_glass_img036", type: false},
+        {id: 37, name: "마스크 선글라스", desc:"쇼핑하기", price: '￦955,000',src:"woman_glass_img037", type: false},
+        {id: 38, name: "마스크 선글라스", desc:"쇼핑하기",  price: '￦715,000',src:"woman_glass_img038", type: false},
+        {id: 39, name: "메탈 및 아세테이트 스퀘어 선글라스", desc:"쇼핑하기",  price: '￦635,000',src:"woman_glass_img039", type: false},
+        {id: 40, name: "메탈 및 아세테이트 스퀘어 안경", desc:"쇼핑하기",  price: '￦635,000',src:"woman_glass_img040", type: false},
+        {id: 41, name: "크리스털 직사각형 선글라스", desc:"쇼핑하기",  price: '￦945,000',src:"woman_glass_img041", type: false},
+        {id: 42, name: "스페셜 핏 스퀘어 아세테이트 선글라스", desc:"쇼핑하기",  price: '￦515,000',src:"woman_glass_img042", type: false},
 
     ];
     var scrollTop, headerHeight;
-    var id, name, desc, src, src2,type, price;
+    var id, name, desc, src, src2,src3,src4,type, price;
     var html = "";
-    var text= "";
+    var txt= "";
     var typeBox = "";
     var itemIndex;
     var viewIndex;
@@ -88,7 +88,7 @@ $(document).ready(function(){
     });
 
     addItem(index, 14);
-  function addItem(start, _add){
+    function addItem(start, _add){
       html = "";
       end = start + 14;
       if(end > length_scroll){
@@ -115,9 +115,17 @@ $(document).ready(function(){
                 typeBox = "Wearbox1";
                 backBox = 
                 `<div class="back">
+                    <input type="button" value="〈" id="left_btn" class="btn">
+                    <input type="button" value="〉" id="right_btn" class="btn">
                     <div class="wrapper">
                         <div class="slide">
                             <img src="img/${src2}.jpg">
+                        </div>
+                        <div class="slide">
+                            <img src="img/${src3}.jpg">
+                        </div>
+                        <div class="slide">
+                            <img src="img/${src4}.jpg">
                         </div>
                     </div>
                     <div class="like_icon">
@@ -204,7 +212,7 @@ $(document).ready(function(){
         }, timer);
         viewIndex++;
         
-        viewIndex = viewIndex % length;i
+        viewIndex = viewIndex % length;
         $('.sec_inr').eq(itemIndex).find('.slide').eq(viewIndex).css({
             left: "100%"
         }).animate({
