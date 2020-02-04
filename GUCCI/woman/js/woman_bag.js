@@ -13,18 +13,54 @@ $(document).ready(function(){
         {id: 11, name: "Disney x Gucci 백팩", desc:"쇼핑하기",  price: '￦1,330,000',src:"woman_bag_img011", type: false},
         {id: 12, name: "미키 마우스 탑 핸들 백", desc:"쇼핑하기",  price: '￦5,800,000',src:"woman_bag_img012", type: false},
         {id: 13, name: "[GG 마몽] 온라인 단독 Disney x Gucci GG 마몽 스몰 숄더백", desc:"쇼핑하기",  price: '￦3,300,000',src:"woman_bag_img013", type: false},
-        {id: 14, name: "[GG 마몽] 미니 백", desc:"쇼핑하기",  price: '￦1,150,000',src:"woman_bag_img014", type: false}
+        {id: 14, name: "[GG 마몽] 미니 백", desc:"쇼핑하기",  price: '￦1,150,000',src:"woman_bag_img014", type: false},
+        {id: 15, name: "[실비] 1969 스몰 탑 핸들 백", desc:"쇼핑하기",price: '￦4,600,000', src:"woman_bag_img015",type: false},
+        {id: 16, name: "[실비] 1969 스몰 탑 핸들 백", desc:"쇼핑하기",price: '￦4,600,000', src:"woman_bag_img016", type: false},
+        {id: 17, name: "[실비] 1969 스몰 탑 핸들 백", desc:"쇼핑하기", price: '￦4,660,000',src:"woman_bag_img017", type: false},
+        {id: 18, name: "[실비] 1969 페이턴트 가죽 미니 탑 핸들백", desc:"쇼핑하기", price: '￦4,100,000',src:"woman_bag_img018", type: false},
+        {id: 19, name: "구찌 1955 홀스빗 숄더백", desc:"쇼핑하기", price: '￦2,730,000',src:"woman_bag_img019", type: true},
+        {id: 20, name: "[실비] 1969 스몰 숄더백", desc:"쇼핑하기", price: '￦4,600,000', src:"woman_bag_img020", type: false},
+        {id: 21, name: "[실비] 1969 스몰 숄더백", desc:"쇼핑하기",  price: '￦4,600,000',src:"woman_bag_img021",type: false},
+        {id: 22, name: "구찌 1955 홀스빗 숄더백", desc:"쇼핑하기", price: '￦3,100,000', src:"woman_bag_img022", type: false},
+        {id: 23, name: "구찌 1955 홀스빗 버킷백", desc:"쇼핑하기", price: '￦2,450,000',src:"woman_bag_img023", type: false},
+        {id: 24, name: "구찌 1955 홀스빗 버킷백", desc:"쇼핑하기",  price: '￦2,450,000',src:"woman_bag_img024", type: true},
+        {id: 25, name: "구찌 1955 홀스빗 숄더백", desc:"쇼핑하기",  price: '￦2,730,000',src:"woman_bag_img025", type: false},
+        {id: 26, name: "구찌 1955 홀스빗 숄더백", desc:"쇼핑하기",  price: '￦2,730,000',src:"woman_bag_img026", type: false},
+        {id: 27, name: "구찌 1955 홀스빗 숄더백", desc:"쇼핑하기",  price: '￦3,100,000',src:"woman_bag_img027", type: false},
+        {id: 28, name: "구찌 1955 홀스빗 숄더백", desc:"쇼핑하기",  price: '￦3,100,000',src:"woman_bag_img028", type: false},
+        {id: 29, name: "[GG 마몽] 미니 숄더 백 ", desc:"쇼핑하기",price: '￦2,190,000', src:"woman_bag_img029",type: false},
+        {id: 30, name: "[GG 마몽] 스몰 숄더 백", desc:"쇼핑하기",price: '￦1,330,000', src:"woman_bag_img030", type: false},
+        {id: 31, name: "[GG 마몽] 스몰 숄더 백 ", desc:"쇼핑하기", price: '￦1,330,000',src:"woman_bag_img031", type: false},
+        {id: 32, name: "[GG 마몽] 스몰 숄더백", desc:"쇼핑하기", price: '￦2,830,000',src:"woman_bag_img032", type: false},
+        {id: 33, name: "[GG 마몽] 미니 숄더백", desc:"쇼핑하기", price: '￦2,030,000',src:"woman_bag_img033", type: true},
+        {id: 34, name: "[GG 마몽] 미니 숄더백", desc:"쇼핑하기", price: '￦2,030,000', src:"woman_bag_img034", type: false},
+        {id: 35, name: "[GG 마몽] 미니 숄더백", desc:"쇼핑하기",  price: '￦2,030,000',src:"woman_bag_img035",type: false},
+        {id: 36, name: "구찌 1955 홀스빗 버킷백", desc:"쇼핑하기", price: '￦2,450,000', src:"woman_bag_img036", type: false},
+        {id: 37, name: "구찌 1955 홀스빗 버킷백", desc:"쇼핑하기", price: '￦2,450,000',src:"woman_bag_img037", type: false},
+        {id: 38, name: "Disney x Gucci 라운드 숄더백", desc:"쇼핑하기",  price: '￦2,650,000',src:"woman_bag_img038", type: true},
+        {id: 39, name: "[GG 마몽] 미니 탑 핸들 백", desc:"쇼핑하기",  price: '￦2,640,000',src:"woman_bag_img039", type: false},
+        {id: 40, name: "[디오니서스] 발렌타인데이 한정 디오니서스 수퍼 미니백", desc:"쇼핑하기",  price: '￦1,440,000',src:"woman_bag_img040", type: false},
+        {id: 41, name: "[디오니서스] 가죽 수퍼 미니 백", desc:"쇼핑하기",  price: '￦1,110,000',src:"woman_bag_img041", type: false},
+        {id: 42, name: "[디오니서스] 가죽 수퍼 미니 백", desc:"쇼핑하기",  price: '￦1,110,000',src:"woman_bag_img042", type: false}
+
     ];
     var scrollTop, headerHeight;
     var id, name, desc, src, src2,src3,src4,type, price;
     var html = "";
-    var text= "";
+    var txt= "";
     var typeBox = "";
     var itemIndex;
     var viewIndex;
     var timer = 500;
     var length = 3;
     var animation = false;
+    var backBox = "";
+
+    var index = 0;
+    var windowHeight = $(window).height();
+    var footHeight = $('footer').height();
+    var length_scroll = secBox.length;
+    var end;
 
     $(document).scroll(function(){
         scrollTop = $(window).scrollTop();
@@ -40,51 +76,45 @@ $(document).ready(function(){
             $('.left_ul').removeClass('block');
             $('.right_ul').removeClass('block');
         }
-    });
-    document.getElementById('main_logo').onclick = function(){
-        window.location.href = "../index.html";
-    };  
-    document.getElementById('n_span01').onclick = function(){
-        window.location.href = "../what_nav/what_nav.html";
-    };
-    document.getElementById('n_span02').onclick = function(){
-        window.location.href = "../woman/woman_nav.html";
-    }; 
-    document.getElementById('n_span03').onclick = function(){
-        window.location.href = "../man/man_nav.html";
-    }; 
-    document.getElementById('n_span04').onclick = function(){
-        window.location.href = "../gift/gift_nav.html";
-    };
-    document.getElementById('n_span05').onclick = function(){
-        window.location.href = "../watch_acc/acc_wacth.html";
-    };
-    document.getElementById('n_span06').onclick = function(){
-        window.location.href = "../perfume/perfume_nav.html";
-    };
-    document.getElementById('n_span07').onclick = function(){
-        window.location.href = "../decoration/deco_nav.html";
-    };
-    for(var i in secBox){
-        id = secBox[i].id;
-        name = secBox[i].name;
-        desc = secBox[i].desc;
-        src = secBox[i].src;
-        src2 = src + "_hover";
-        src3 = src2 + "02";
-        src4 = src2 + "03";
-        price = secBox[i].price;
-        type = secBox[i].type;
 
-        backBox = '';
 
-        if(type === true){
-            typeBox = 'Wearbox2';
+        var scroll_top = $(window).scrollTop();
+        var documentHeight = $(document).height()-footHeight;
+        var scrollHeight = scroll_top + windowHeight;
+        
+        if(scrollHeight > documentHeight){
+              addItem(index, 14);
         }
-        else{
-            typeBox = 'Wearbox1';
-            backBox = `
-                <div class="back">
+    });
+
+  addItem(index, 14);
+  function addItem(start, _add){
+      html = "";
+      end = start + 14;
+      if(end > length_scroll){
+          end = length_scroll;
+      }
+      for(var i = start; i < end; i++){
+            index++;
+            id = secBox[i].id;
+            name = secBox[i].name;
+            desc = secBox[i].desc;
+            src = secBox[i].src;
+            src2 = src + "_hover";
+            src3 = src2 + "02";
+            src4 = src2 + "03";
+            price = secBox[i].price;
+            type = secBox[i].type;
+    
+            backBox = '';
+    
+            if(type){
+                typeBox = 'Wearbox2';
+            }
+            else{
+                typeBox = "Wearbox1";
+                backBox = 
+                `<div class="back">
                     <input type="button" value="〈" id="left_btn" class="btn">
                     <input type="button" value="〉" id="right_btn" class="btn">
                     <div class="wrapper">
@@ -111,25 +141,49 @@ $(document).ready(function(){
                         ${desc}
                         <i class="fas fa-angle-right"></i>
                     </div>
+                </div>`;
+            }
+    
+            txt = `
+                <div class="sec_inr ${typeBox}">
+                    <input type="hidden" class="itemId" value="${id}">
+                    <div class="front">
+                        <img src="img/${src}.jpg" class="${typeBox}">
+                    </div>
+                    <div class="like_icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    ${backBox}
                 </div>
             `;
-        }
-
-        txt = `
-            <div class="sec_inr ${typeBox}">
-                <input type="hidden" class="itemId" value="${id}">
-                <div class="front">
-                    <img src="img/${src}.jpg" class="${typeBox}">
-                </div>
-                <div class="like_icon">
-                    <i class="far fa-heart"></i>
-                </div>
-                ${backBox}
-            </div>
-        `;
-        html = html + txt;
+            html = html + txt;
+      }
+      $('.sec_box').append(html);
     }
-    $('.sec_box').html(html);
+    document.getElementById('main_logo').onclick = function(){
+        window.location.href = "../index.html";
+    };  
+    document.getElementById('n_span01').onclick = function(){
+        window.location.href = "../what_nav/what_nav.html";
+    };
+    document.getElementById('n_span02').onclick = function(){
+        window.location.href = "../woman/woman_nav.html";
+    }; 
+    document.getElementById('n_span03').onclick = function(){
+        window.location.href = "../man/man_nav.html";
+    }; 
+    document.getElementById('n_span04').onclick = function(){
+        window.location.href = "../gift/gift_nav.html";
+    };
+    document.getElementById('n_span05').onclick = function(){
+        window.location.href = "../watch_acc/acc_wacth.html";
+    };
+    document.getElementById('n_span06').onclick = function(){
+        window.location.href = "../perfume/perfume_nav.html";
+    };
+    document.getElementById('n_span07').onclick = function(){
+        window.location.href = "../decoration/deco_nav.html";
+    };
 
     $(document).on('click', '.wrapper', function(){
         var itemId = $(this).parent().siblings('.itemId')[0].value;
@@ -145,7 +199,6 @@ $(document).ready(function(){
             left: 0
         });
     });
-
     $(document).on('click', '#right_btn', function(){
         if(animation){
             return;
@@ -156,8 +209,7 @@ $(document).ready(function(){
             left: "-100%"
         }, timer);
         viewIndex++;
-        
-        viewIndex = viewIndex % length;i
+        viewIndex = viewIndex % length;
         $('.sec_inr').eq(itemIndex).find('.slide').eq(viewIndex).css({
             left: "100%"
         }).animate({
@@ -173,7 +225,6 @@ $(document).ready(function(){
         if(animation){
             return;
         }
-        animation = true;
         itemIndex = $(this).parent().parent().index();
         $('.sec_inr').eq(itemIndex).find('.slide').eq(viewIndex).animate({
             left:'100%'
@@ -186,13 +237,8 @@ $(document).ready(function(){
             left:'-100%'
         }).animate({
             left: '0%'
-        }, {
-            duration: timer,
-            complete:function(){
-                animation = false;
-            }
-        });
+        }, timer);
     });
 
-    
+   
 });

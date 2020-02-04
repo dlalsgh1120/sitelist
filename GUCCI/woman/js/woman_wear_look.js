@@ -154,21 +154,16 @@ $(document).ready(function(){
         item = secBox.filter(function(res){
             return res.id === value;
         });
+        item02 = detailItem.filter(function(res){
+            return res.item_id === value;
+        });
 
-        // 1. 일단 해당 아이디에 매칭되는 디테일 상품들을 별도로 추려내고(filter)
         var  filterDetail = detailItem.filter(function(res){
             return res.item_id === value;
         });
 
-        // 2. 필터링된 상품의 갯수를 구합니다.
         var filterDetailLength = filterDetail.length;
-
-        // 3.슬라이드의 갯수도 구합니다. 슬라이드 갯수는 디테일 상품이 최대 2개씩 들어가고 추가로 1개가 더 있을 땐 슬라이드 하나가 더 추가되므로
-        // 디테일갯수 나누기 2를 올림(반올림 아님)한 값임.
         slideLength = Math.ceil(filterDetailLength/2);
-
-        //////////////////////////////////////////
-        // 4. 먼저 슬라이드 껍데기를 만들어줍니다.
         var slide =  `<div class="slide"></div>`;
         html = '';
         txt = '';
@@ -179,12 +174,8 @@ $(document).ready(function(){
 
         $('.wrapper').html(html);
 
-        //////////////////////////////////////////
-
         itemIdx = 0; 
 
-        // 5. 껍데기에 들어갈 내용을 만듭니다.
-        // 설명이 필요하면 별도로 물어보세요. 말로 설명하기 힘들어요.
         for(var i = 0; i<slideLength; i++){
             var front = itemIdx;
             var back = itemIdx+1;
@@ -226,17 +217,16 @@ $(document).ready(function(){
         }
         animation = true;
 
+        itemIndex = $(this).parent().parent().index();
         $('.slide').eq(viewIndex).animate({
             left: '-100%'
         }, timer);
 
+        console.log(slideLength);
+
         viewIndex++;
-        //length를 slideLength로 대체했어요. 3이라고 딱 정해놓으면 안 되고, 슬라이드 갯수가 매번 바뀌므로
-        // 이 부분은 직접 슬라이드 갯수를 구해서 처리해야 돼요.
         viewIndex = viewIndex % slideLength;
 
-        //$('main_box')부터 들어가지 말고 바로 slide부터 찾아도 돼요. 아래처럼.
-        // 즉 itemIndex는 필요없으니까 안 써도 돼요. 위 #btn_left는 직접 바꿔보세요.
         $('.slide').eq(viewIndex).css({
             left: '100%'
         }).animate({
@@ -255,17 +245,17 @@ $(document).ready(function(){
         animation = true;
 
         itemIndex = $(this).parent().parent().index();
-        $('.main_box').eq(itemIndex).find('.slide').eq(viewIndex).animate({
+        $('.slide').eq(viewIndex).animate({
             left:'100%'
         }, timer);
         viewIndex--;
         if (viewIndex < 0) {
-            viewIndex = length - 1;
+            viewIndex = slideLength - 1;
         }
-        $('.main_box').eq(itemIndex).find('.slide').eq(viewIndex).css({
+        $('.slide').eq(viewIndex).css({
             left:'-100%'
         }).animate({
-            left: '0%'
+            left: '0'
         },{
             duration: timer,
             complete:function(){

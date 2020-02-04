@@ -1,33 +1,47 @@
 $(document).ready(function(){
     var secBox = [
-        {id: 1, name: "Disney x Gucci 실크 셔츠", desc:"쇼핑하기",price: '￦2,700,000', src:"woman_nav_img01",src2:"woman_wear_img01",type: false},
-        {id: 2, name: "Disney x Gucci 실크 파자마 팬츠", desc:"쇼핑하기",price: '￦2,150,000', src:"woman_nav_img02",src2:"woman_wear_img02", type: false},
-        {id: 3, name: "울 실크 팬츠", desc:"쇼핑하기", price: '￦1,600,000',src:"woman_nav_img03", src2:"woman_wear_img03",type: false},
-        {id: 4, name: "캐디 울 실크 숏 드레스", desc:"쇼핑하기", price: '￦2,700,000',src:"woman_nav_img04",src2:"woman_wear_img04", type: false},
+        {id: 1, name: "Disney x Gucci 실크 셔츠", desc:"쇼핑하기",price: '￦2,700,000', src:"woman_nav_img01",type: false},
+        {id: 2, name: "Disney x Gucci 실크 파자마 팬츠", desc:"쇼핑하기",price: '￦2,150,000', src:"woman_nav_img02", type: false},
+        {id: 3, name: "울 실크 팬츠", desc:"쇼핑하기", price: '￦1,600,000',src:"woman_nav_img03",type: false},
+        {id: 4, name: "캐디 울 실크 숏 드레스", desc:"쇼핑하기", price: '￦2,700,000',src:"woman_nav_img04", type: false},
         {id: 5,name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000',src:"woman_nav_img05", type: true},
-        {id: 6, name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000', src:"woman_nav_img06",src2:"woman_wear_img06", type: false},
-        {id: 7, name: "홀스슈 디테일의 트위드 스커트", desc:"쇼핑하기",  price: '￦2,700,000',src:"woman_nav_img07",src2:"woman_wear_img07",type: false},
-        {id: 8, name: "라이언 헤드 토글 디테일의 트위드 재킷", desc:"쇼핑하기", price: '￦4,000,000', src:"woman_nav_img08",src2:"woman_wear_img08", type: false},
-        {id: 9, name: "Disney x Gucci 저지 드레스", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img09", src2:"woman_wear_img09",type: false},
+        {id: 6, name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000', src:"woman_nav_img06", type: false},
+        {id: 7, name: "홀스슈 디테일의 트위드 스커트", desc:"쇼핑하기",  price: '￦2,700,000',src:"woman_nav_img07",type: false},
+        {id: 8, name: "라이언 헤드 토글 디테일의 트위드 재킷", desc:"쇼핑하기", price: '￦4,000,000', src:"woman_nav_img08", type: false},
+        {id: 9, name: "Disney x Gucci 저지 드레스", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img09",type: false},
         {id: 10, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img010", type: true},
-        {id: 11, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img011",src2:"woman_wear_img011", type: false},
-        {id: 12, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦1,350,000',src:"woman_nav_img012",src2:"woman_wear_img012", type: false},
-        {id: 13, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img013",src2:"woman_img013", type: false},
-        {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img014",src2:"woman_wear_img014", type: false},
-        {id: 15, name: "Disney x Gucci 실크 셔츠", desc:"쇼핑하기",price: '￦2,700,000', src:"woman_nav_img015",src2:"woman_wear_img015",type: false},
-        {id: 16, name: "Disney x Gucci 실크 파자마 팬츠", desc:"쇼핑하기",price: '￦2,150,000', src:"woman_nav_img016",src2:"woman_wear_img016", type: false},
-        {id: 17, name: "울 실크 팬츠", desc:"쇼핑하기", price: '￦1,600,000',src:"woman_nav_img017", src2:"woman_wear_img017",type: false},
-        {id: 18, name: "캐디 울 실크 숏 드레스", desc:"쇼핑하기", price: '￦2,700,000',src:"woman_nav_img018",src2:"woman_wear_img018", type: false},
-        {id: 19,name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000',src:"woman_nav_img019", type: true},
-        {id: 20, name: "Disney x Gucci 나일론 재킷", desc:"쇼핑하기", price: '￦3,300,000', src:"woman_nav_img020",src2:"woman_wear_img020", type: false},
-        {id: 21, name: "홀스슈 디테일의 트위드 스커트", desc:"쇼핑하기",  price: '￦2,700,000',src:"woman_nav_img021",src2:"woman_wear_img021",type: false},
-        {id: 22, name: "라이언 헤드 토글 디테일의 트위드 재킷", desc:"쇼핑하기", price: '￦4,000,000', src:"woman_nav_img022",src2:"woman_wear_img022", type: false},
-        {id: 23, name: "Disney x Gucci 저지 드레스", desc:"쇼핑하기", price: '￦2,000,000',src:"woman_nav_img023", src2:"woman_wear_img023",type: false},
-        {id: 24, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img024", type: true},
-        {id: 25, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img025",src2:"woman_wear_img025", type: false},
-        {id: 26, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦1,350,000',src:"woman_nav_img026",src2:"woman_wear_img026", type: false},
-        {id: 27, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img027",src2:"woman_img027", type: false},
-        {id: 28, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img028",src2:"woman_wear_img028", type: false}
+        {id: 11, name: "Disney x Gucci 코튼 드릴 재킷", desc:"쇼핑하기",  price: '￦2,850,000',src:"woman_nav_img011", type: false},
+        {id: 12, name: "Disney x Gucci 1980년대 데님 팬츠", desc:"쇼핑하기",  price: '￦1,350,000',src:"woman_nav_img012", type: false},
+        {id: 13, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",  price: '￦1,550,000',src:"woman_nav_img013", type: false},
+        {id: 14, name: "Disney x Gucci 코튼 드릴 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img014", type: false},
+        {id: 15, name: "Disney x Gucci 오버사이즈 티셔츠", desc:"쇼핑하기",price: '￦850,000', src:"woman_nav_img015",type: false},
+        {id: 16, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",price: '￦1,550,000', src:"woman_nav_img016", type: false},
+        {id: 17, name: "데님 스키니 팬츠", desc:"쇼핑하기", price: '￦1,370,000',src:"woman_nav_img017",type: false},
+        {id: 18, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,300,000',src:"woman_nav_img018", type: false},
+        {id: 19, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,700,000',src:"woman_nav_img019", type: true},
+        {id: 20, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,700,000', src:"woman_nav_img020", type: false},
+        {id: 21, name: "Disney x Gucci 오버사이즈 티셔츠", desc:"쇼핑하기",  price: '￦850,000',src:"woman_nav_img021",type: false},
+        {id: 22, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,300,000', src:"woman_nav_img022", type: false},
+        {id: 23, name: "패치가 장식된 데님 팬츠", desc:"쇼핑하기", price: '￦1,610,000',src:"woman_nav_img023",type: false},
+        {id: 24, name: "탈착 가능한 요소의 트위드 드레스", desc:"쇼핑하기",  price: '￦5,400,000',src:"woman_nav_img024", type: true},
+        {id: 25, name: "탈착 가능한 요소의 트위드 드레스", desc:"쇼핑하기",  price: '￦5,400,000',src:"woman_nav_img025", type: false},
+        {id: 26, name: "체크 트위드 플레어 팬츠", desc:"쇼핑하기",  price: '￦2,150,000',src:"woman_nav_img026", type: false},
+        {id: 27, name: "트위드 튜닉 드레스", desc:"쇼핑하기",  price: '￦3,300,000',src:"woman_nav_img027", type: false},
+        {id: 28, name: "트위드 미니 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img028", type: false},
+        {id: 29, name: "Disney x Gucci 오버사이즈 티셔츠", desc:"쇼핑하기",price: '￦850,000', src:"woman_nav_img029",type: false},
+        {id: 30, name: "Disney x Gucci 오버사이즈 스웨트셔츠", desc:"쇼핑하기",price: '￦1,550,000', src:"woman_nav_img030", type: false},
+        {id: 31, name: "데님 스키니 팬츠", desc:"쇼핑하기", price: '￦1,370,000',src:"woman_nav_img031",type: false},
+        {id: 32, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,300,000',src:"woman_nav_img032", type: false},
+        {id: 33, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,700,000',src:"woman_nav_img033", type: true},
+        {id: 34, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,700,000', src:"woman_nav_img034", type: false},
+        {id: 35, name: "Disney x Gucci 오버사이즈 티셔츠", desc:"쇼핑하기",  price: '￦850,000',src:"woman_nav_img035",type: false},
+        {id: 36, name: "Disney x Gucci 울 스웨터", desc:"쇼핑하기", price: '￦2,300,000', src:"woman_nav_img036", type: false},
+        {id: 37, name: "패치가 장식된 데님 팬츠", desc:"쇼핑하기", price: '￦1,610,000',src:"woman_nav_img037",type: false},
+        {id: 38, name: "탈착 가능한 요소의 트위드 드레스", desc:"쇼핑하기",  price: '￦5,400,000',src:"woman_nav_img038", type: true},
+        {id: 39, name: "탈착 가능한 요소의 트위드 드레스", desc:"쇼핑하기",  price: '￦5,400,000',src:"woman_nav_img039", type: false},
+        {id: 40, name: "체크 트위드 플레어 팬츠", desc:"쇼핑하기",  price: '￦2,150,000',src:"woman_nav_img040", type: false},
+        {id: 41, name: "트위드 튜닉 드레스", desc:"쇼핑하기",  price: '￦3,300,000',src:"woman_nav_img041", type: false},
+        {id: 42, name: "트위드 미니 스커트", desc:"쇼핑하기",  price: '￦1,250,000',src:"woman_nav_img042", type: false}
     ];
     
     var scrollTop, headerHeight;
@@ -38,13 +52,13 @@ $(document).ready(function(){
     var itemIndex;
     var viewIndex;
     var timer = 500;
-    // length는 해당 요소를 잡아서 해주세요. $('.box').length; 이런식으로.
     var length = 3;
     var animation = false;
     var backBox = "";
 
     var index = 0;
     var windowHeight = $(window).height();
+    var footHeight = $('footer').height();
     var length_scroll = secBox.length;
     var end;
 
@@ -65,15 +79,10 @@ $(document).ready(function(){
 
 
         var scroll_top = $(window).scrollTop();
-
-        // 기존 -50으로 해놓고 한 번 체크해보고 -700으로 하고 체크해보세요. 차이점 알거에요.
-        // 그리고 700은 footer의 높이를 코딩으로 구해서 대체해보세요. $('footer').height();
-        // height만 쓰면 padding 값이 더해지지 않으니까 참고하세요.
-        var documentHeight = $(document).height() - 700;
+        var documentHeight = $(document).height()-footHeight;
         var scrollHeight = scroll_top + windowHeight;
         
         if(scrollHeight > documentHeight){
-			console.log('현재 보여지는 item 수는?' , index);
               addItem(index, 14);
         }
     });
@@ -86,7 +95,7 @@ $(document).ready(function(){
           end = length_scroll;
       }
       for(var i = start; i < end; i++){
-          index++;
+            index++;
             id = secBox[i].id;
             name = secBox[i].name;
             desc = secBox[i].desc;
@@ -150,7 +159,7 @@ $(document).ready(function(){
             html = html + txt;
       }
       $('.sec_box').append(html);
-   }
+    }
     document.getElementById('main_logo').onclick = function(){
         window.location.href = "../index.html";
     };  
