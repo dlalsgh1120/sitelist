@@ -114,6 +114,45 @@ $(document).ready(function(){
         { id: 62, item_id: 14, src: 'woman_wear_img014_hover02.jpg'},
         { id: 63, item_id: 14, src: 'woman_wear_img014_hover03.jpg'},
         { id: 64, item_id: 14, src: 'woman_wear_img014_hover04.jpg'},
+        { id: 65, item_id: 15, src: 'woman_wear_img015.jpg'},
+        { id: 66, item_id: 15, src: 'woman_wear_img015_hover.jpg'},
+        { id: 67, item_id: 15, src: 'woman_wear_img015_hover02.jpg'},
+        { id: 68, item_id: 15, src: 'woman_wear_img015_hover03.jpg'},
+        { id: 69, item_id: 15, src: 'woman_wear_img015_hover04.jpg'},
+        { id: 70, item_id: 16, src: 'woman_wear_img016.jpg'},
+        { id: 71, item_id: 16, src: 'woman_wear_img016_hover.jpg'},
+        { id: 72, item_id: 16, src: 'woman_wear_img016_hover02.jpg'},
+        { id: 73, item_id: 16, src: 'woman_wear_img016_hover03.jpg'},
+        { id: 74, item_id: 16, src: 'woman_wear_img016_hover04.jpg'},
+        { id: 75, item_id: 17, src: 'woman_wear_img017.jpg'},
+        { id: 76, item_id: 17, src: 'woman_wear_img017_hover.jpg'},
+        { id: 77, item_id: 17, src: 'woman_wear_img017_hover02.jpg'},
+        { id: 78, item_id: 17, src: 'woman_wear_img017_hover03.jpg'},
+        { id: 79, item_id: 18, src: 'woman_wear_img018.jpg'},
+        { id: 80, item_id: 18, src: 'woman_wear_img018_hover.jpg'},
+        { id: 81, item_id: 18, src: 'woman_wear_img018_hover02.jpg'},
+        { id: 82, item_id: 18, src: 'woman_wear_img018_hover03.jpg'},
+        { id: 83, item_id: 18, src: 'woman_wear_img018_hover04.jpg'},
+        { id: 84, item_id: 21, src: 'woman_wear_img021.jpg'},
+        { id: 85, item_id: 21, src: 'woman_wear_img021_hover.jpg'},
+        { id: 86, item_id: 21, src: 'woman_wear_img021_hover02.jpg'},
+        { id: 87, item_id: 21, src: 'woman_wear_img021_hover03.jpg'},
+        { id: 88, item_id: 21, src: 'woman_wear_img021_hover04.jpg'},
+        { id: 89, item_id: 22, src: 'woman_wear_img022.jpg'},
+        { id: 90, item_id: 22, src: 'woman_wear_img022_hover.jpg'},
+        { id: 91, item_id: 22, src: 'woman_wear_img022_hover02.jpg'},
+        { id: 92, item_id: 22, src: 'woman_wear_img022_hover03.jpg'},
+        { id: 93, item_id: 22, src: 'woman_wear_img022_hover04.jpg'},
+        { id: 94, item_id: 23, src: 'woman_wear_img023.jpg'},
+        { id: 95, item_id: 23, src: 'woman_wear_img023_hover.jpg'},
+        { id: 96, item_id: 23, src: 'woman_wear_img023_hover02.jpg'},
+        { id: 97, item_id: 23, src: 'woman_wear_img023_hover03.jpg'},
+        { id: 98, item_id: 24, src: 'woman_wear_img024.jpg'},
+        { id: 99, item_id: 24, src: 'woman_wear_img024_hover.jpg'},
+        { id: 100, item_id: 24, src: 'woman_wear_img024_hover02.jpg'},
+        { id: 101, item_id: 24, src: 'woman_wear_img024_hover03.jpg'},
+        { id: 102, item_id: 24, src: 'woman_wear_img024_hover04.jpg'},
+        { id: 103, item_id: 24, src: 'woman_wear_img024_hover05.jpg'},
 
     ];
 
@@ -122,7 +161,7 @@ $(document).ready(function(){
     var timer = 500;
     var itemIndex;
     var viewIndex;
-    var length = 0;
+    var length = secBox.length;
     
     $(document).scroll(function(){
         scrollTop = $(window).scrollTop();
