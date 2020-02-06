@@ -9,57 +9,13 @@ $(document).ready(function(){
     var auto;
 
     autoplay();
-    setPage(index);
-    $(document).on('click', '.nav_li', function(){
-        index = $(this).index();
-        setPage(index);
+    $(document).on('click', '.right_btn', function(){
+        $('nav').addClass('block');
     });
-    
-    var pageHTML = "";
-    function setPage(idx){
-        switch(idx){
-            case 0 : {
-                pageHTML = 
-                `
-                
-                `;
-                break;
-            }
-            case 1 : {
-                pageHTML = 
-                `
-                `;
-                break;
-            }
-            case 2 : {
-                pageHTML = 
-                `
-                `;
-                break;
-            }
-            case 3 : {
-                pageHTML = 
-                `
-                `;
-                break;
-            }
-            case 4 : {
-                pageHTML = 
-                `
-                `;
-                break;
-            }
-        }
-        $('.main_container').html(pageHTML);
-    }
 
     $('.move_slide').eq(0).css({
         left: 0
     });
-    $(document).on('click', '.right_btn', function(){
-        $('nav').addClass('block');
-    });
-    
     $(document).on('click', '#right_btn', function(){
         if(animation){
             return;

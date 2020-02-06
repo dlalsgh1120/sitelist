@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" 
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/index.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -31,66 +30,24 @@
                 <li class="nav_li">Media</li>
             </ul>
         </nav>
-        <main>
-            <input type="button" value="〈" class="btn" id="left_btn">
-            <input type="button" value="〉" class="btn" id="right_btn">
-            <div class="slide_img">
-                <div class="move_slide">
-                    <h1>Future Innovated,</h1>
-                    <p>Innovation Realized</p>
-                </div>
-                <div class="move_slide">
-                    <p>Future Innovated,</p>
-                    <h1>Innovation Realized</h1>
-                </div>
-            </div>
-            <div class="slide_bull"> 
-                <div class="in_bull active"></div>
-                <div class="in_bull"></div>   
-            </div>
-        </main>
-        <section>
-            <div class="sec01">
-                <ul class="sec01_ul"> 
-                    <li class="sec01_li">
-                        우리는 혁신의 결과물이 아닌 <b>혁신을 실현하게 만드는 방법</b>에 대해 연구합니다.
-                    </li>
-                    <li class="sec01_li">
-                        혁신을 발현하게 만드는 철학과 영감에서부터
-                        <b>혁신가들의 생각과 협업하는 방식</b>에 대해 이야기하고자 합니다.
-                    </li>
-                    <li class="sec01_li">
-                        더 많은 사람들이 <b>스스로 혁신을 실현</b>할 수 있도록 한 발 앞서 준비하겠습니다.
-                    </li>
-                </ul>
-            </div>
-            <div class="sec02">
-                <div class="sec02_text">
-                    <h1>커팅에지 실험실 
-                        <br>
-                        ‘한국테크노돔’</h1>
-                    <p>과연 일하는 공간은 기업이 추구하는 가치를얼만큼 반영할 수 있을까?</p>
-                </div>
-            </div>
-            <div class="sec03">
-                <div class="sec03_text">
-                    <h1>보이지 않는 시스템까지,
-                        <br>
-                        'McLaren' 제품 디자이너</h1>
-                    <p>F1 레이싱카로 유명한 맥라렌의 제품 디자이너 최종우는눈에 보이지 않는 경험과 서비스를 디자인한다.</p>
-                </div>
-            </div>
-            <div class="sec04">
-                <div class="sec04_text">
-                    <h1>타이어
-                        <br>
-                        패션을 입다</h1>
-                    <p>한국타이어가 지금 가장 젊고 '핫한' 피치스와손을 잡은 이유는 무엇일까?</p>
-                </div>
-            </div>
-        </section>
-
         <div class="main_container"></div>
     </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            var html;
+            startLoading();
+            function startLoading(){
+                html = main();
+                setDocument(html);
+            }
+
+            
+            function setDocument(page){ 
+                $('.main_container').html(page);
+            }
+        });
+    </script>
 </body>
 </html>

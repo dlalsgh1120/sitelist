@@ -1,6 +1,7 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 .wrap{
     width: 100%;
+    user-select: none;
 }
 ul{list-style: none;}
 img{width: 100%;}
@@ -58,7 +59,7 @@ nav{
     background: url('../img/nav_main.jpg') no-repeat center;
     background-size: cover; 
     display: none;
-    z-index: 9;
+    z-index: 99;
 }
 .block{
     display: block;
@@ -120,7 +121,7 @@ main{
     outline: none;
     background: transparent;
     border: none;
-    z-index: 99;
+    z-index: 9;
     color: #fff;
     font-size: 50px;
     cursor: pointer;
@@ -217,4 +218,26 @@ section{
 }
 .sec02_text p, .sec03_text p, .sec04_text p{
     padding-right: 150px; 
+}
+.sec05{
+    width: 100%;
+    padding: 50px 100px 0;
+}
+.sec05_box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec05_left{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+.sec05_right{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
 }
