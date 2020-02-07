@@ -59,7 +59,7 @@ function main(){
             </div>
             <div class="sec05">
                 <div class="sec05_box">
-                    <div class="sec05_left">
+                    <div class="sec05_left_top">
                         <h1>3D 프린팅,
                             <br>
                             소재의 무한한 가능성
@@ -68,36 +68,50 @@ function main(){
                             새로운 소재는 언제나 새로운 혁신을 일으켜 왔다.
                         </p>    
                     </div>
-                    <div class="sec05_right">
+                    <div class="sec05_right_top">
                         <img src="img/sec_img04.jpg" alt="">
                     </div>
                 </div>
                 <div class="sec05_box">
-                    <div class="sec05_left">
+                    <div class="sec05_left_mid">
                         <img src="img/sec_img05.jpg" alt="">
                     </div>
-                    <div class="sec05_right">
-                        <h1>3D 프린팅,
+                    <div class="sec05_right_mid">
+                        <h1>북유럽 디자인,
                             <br>
-                            소재의 무한한 가능성
+                            하이테크와 교감하다
                         </h1>
                         <p>
-                            새로운 소재는 언제나 새로운 혁신을 일으켜 왔다.
+                            디자이너 서지원은 덴마크의 주목받는 스튜디오,
+                            스위프트 크리에이티브에서 일하고 있다.  
                         </p> 
                     </div>
                 </div>
                 <div class="sec05_box">
-                    <div class="sec05_left">
-                        <h1>3D 프린팅,
-                            <br>
-                            소재의 무한한 가능성
-                        </h1>
+                    <div class="sec05_left_bot">
+                        <h1>DTM의 새로운 도전</h1>
                         <p>
-                            새로운 소재는 언제나 새로운 혁신을 일으켜 왔다.
+                            메르세데스 벤츠가 떠났고 애스턴 마틴이 들어온다.
+                            DTM은 새로운 시대로의 출발을 준비하고 있다.
                         </p>    
                     </div>
-                    <div class="sec05_right">
+                    <div class="sec05_right_bot">
                         <img src="img/sec_img06.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sec06">
+                <div class="sec06_box">
+                    <div class="sec06_img">
+                        <img src="img/sec_img07.jpg" alt="">
+                    </div>
+                    <div class="sec06_txt">
+                        <h1>"모터스포츠는 팀 스포츠다."</h1>
+                        <p>
+                            2019 챔피언팀 Hankook AtlasBX 레이싱
+                            <br>
+                            조항우 감독
+                        </p>    
                     </div>
                 </div>
             </div>

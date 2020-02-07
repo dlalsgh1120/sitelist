@@ -231,13 +231,87 @@ section{
     justify-content: center;
     align-items: center;
 }
-.sec05_left{
+.sec05_left_top, .sec05_left_mid, .sec05_left_bot{
+   position: relative;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
+   width: 100%;
+   overflow: hidden;
 }
-.sec05_right{
+.sec05_right_top,.sec05_right_mid, .sec05_right_bot{
    display: flex;
    flex-direction: column;
    justify-content: flex-end;
+   width: 100%;
+   overflow: hidden;
+}
+.sec05_right_mid{
+    text-align: left;
+    margin-left: 50px;
+}
+.sec05_right_top img, .sec05_left_mid img, .sec05_right_bot img{
+    transform: scale(1);
+    cursor: pointer;
+}
+.sec05_right_top img:hover, .sec05_left_mid img:hover, .sec05_right_bot img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.sec05_box h1{
+    font-size: 40px;
+    margin-bottom: 20px; 
+}
+.sec05_box p{
+    padding-right: 280px; 
+}
+.sec05_box:nth-child(1)::before, .sec05_box:nth-child(3)::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 48px;
+    height: 27px;
+    background: url('../img/ico_sprite.png') no-repeat;
+    background-position: -432px -248px; 
+    cursor: pointer;
+}
+.sec05_box:nth-child(2)::before{
+    content: "";
+    position: absolute;
+    right: 44%;
+    bottom: 40px;
+    width: 48px;
+    height: 27px;
+    background: url('../img/ico_sprite.png') no-repeat;
+    background-position: -432px -248px; 
+    cursor: pointer;
+}
+.sec06_box{
+    position: relative;
+}
+.sec06_box_img{
+    width: 100%;
+    height: 400px;
+}
+.sec06_txt{
+    position: absolute;
+    left: 100px;
+    top: 30%;
+    color: #fff;
+}
+.sec06_txt h1{
+    font-size: 40px;
+    margin-bottom: 20px; 
+}
+.sec06_txt::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    width: 48px;
+    height: 27px;
+    background: url('../img/ico_sprite.png') no-repeat;
+    background-position: -479px -241px; 
+    cursor: pointer;
 }
