@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" 
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/business.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -30,11 +32,9 @@
                 <li class="nav_li">Media</li>
             </ul>
         </nav>
-        <div class="main_container"></div>
+        <div id="main_container"></div>
     </div>
-
-    <script src="js/main.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function(){
             var html;
             startLoading();
@@ -44,10 +44,10 @@
             }
 
             
-            function setDocument(page){ 
-                $('.main_container').html(page);
+            function setDocument(page){
+                $('#main_container').html(page);
             }
         });
-    </script>
+    </script> -->
 </body>
 </html>
