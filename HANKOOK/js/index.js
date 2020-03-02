@@ -49,6 +49,10 @@ function main(){
                         <br>
                         ‘한국테크노돔’</h1>
                     <p>과연 일하는 공간은 기업이 추구하는 가치를얼만큼 반영할 수 있을까?</p>
+                    <div class="icon_img">
+                        <div class="icon_bg"></div>
+                        <span>Read more</span>
+                    </div>
                 </div>
             </div>
             <div class="sec03">
@@ -57,6 +61,10 @@ function main(){
                         <br>
                         'McLaren' 제품 디자이너</h1>
                     <p>F1 레이싱카로 유명한 맥라렌의 제품 디자이너 최종우는눈에 보이지 않는 경험과 서비스를 디자인한다.</p>
+                    <div class="icon_img">
+                        <div class="icon_bg"></div>
+                        <span>Read more</span>
+                    </div>
                 </div>
             </div>
             <div class="sec04">
@@ -65,6 +73,10 @@ function main(){
                         <br>
                         패션을 입다</h1>
                     <p>한국타이어가 지금 가장 젊고 '핫한' 피치스와손을 잡은 이유는 무엇일까?</p>
+                    <div class="icon_img">
+                        <div class="icon_bg"></div>
+                        <span>Read more</span>
+                    </div>
                 </div>
             </div>
             <div class="sec05">
@@ -76,7 +88,11 @@ function main(){
                         </h1>
                         <p>
                             새로운 소재는 언제나 새로운 혁신을 일으켜 왔다.
-                        </p>    
+                        </p>  
+                        <div class="icon_img_B">
+                            <div class="icon_bg_B"></div>
+                            <span>Read more</span>
+                        </div>  
                     </div>
                     <div class="sec05_right_top">
                         <img src="img/sec_img04.jpg" alt="">
@@ -95,6 +111,10 @@ function main(){
                             디자이너 서지원은 덴마크의 주목받는 스튜디오,
                             스위프트 크리에이티브에서 일하고 있다.  
                         </p> 
+                        <div class="icon_img_B">
+                            <div class="icon_bg_B"></div>
+                            <span>Read more</span>
+                        </div>  
                     </div>
                 </div>
                 <div class="sec05_box">
@@ -104,6 +124,10 @@ function main(){
                             메르세데스 벤츠가 떠났고 애스턴 마틴이 들어온다.
                             DTM은 새로운 시대로의 출발을 준비하고 있다.
                         </p>    
+                        <div class="icon_img_B">
+                            <div class="icon_bg_B"></div>
+                            <span>Read more</span>
+                        </div>  
                     </div>
                     <div class="sec05_right_bot">
                         <img src="img/sec_img06.jpg" alt="">
@@ -122,9 +146,31 @@ function main(){
                             <br>
                             조항우 감독
                         </p>    
+                        <div class="icon_img">
+                            <div class="icon_bg"></div>
+                            <span>Read more</span>
+                        </div>
                     </div>
                 </div>
             </div>
+           <div class="sec07">
+                <div class="sec07_box">
+                    <div class="sec07_right">
+                        <img src="img/sec_img08.jpg" alt="">
+                    </div>
+                    <div class="sec07_left">
+                        <h1>7000만 조회수의 신화!
+                        웹드라마 <고래먼지> '신우석'</h1>
+                        <p>
+                            지금은 영상 콘텐츠 시대. 영화, 광고, 웹드라마를 종횡무진하며 매번 놀라운 시도로 성공을 써내려가는 신우석 대표.
+                        </p>    
+                        <div class="icon_img_B">
+                            <div class="icon_bg_B"></div>
+                            <span>Read more</span>
+                        </div>  
+                    </div>
+                </div>
+           </div>
         </section>
     `;
     return html;
@@ -139,6 +185,17 @@ $(document).ready(function(){
     var length = $('.move_slide').length;
     var animation = false;
     var auto;
+    
+    var html;
+    startLoading();
+    function startLoading(){
+        html = main();
+            setDocument(html);
+    }
+    function setDocument(page){
+        $('#main_container').html(page);
+    }    
+    
 
     autoplay();
     $(document).on('click', '.nav_li', function(){

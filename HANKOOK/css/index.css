@@ -167,6 +167,12 @@ section{
     align-items: center;
     font-size: 22px;
 }
+.sec01_ul .sec01_li{
+    padding-top: 10px; 
+}
+.sec01_ul .sec01_li:nth-child(1){
+    padding-top: 0; 
+}
 .sec02{
     width: 100%;
     height: 500px;
@@ -202,16 +208,6 @@ section{
     width: 480px;
     color: #fff;
 }
-.sec02_text::before, .sec04_text::before, .sec03_text::before{
-    content: "";
-    position: absolute;
-    bottom: -44px;
-    left: 0;
-    width: 50px;
-    height: 27px;
-    background: url('../img/ico_sprite.png') no-repeat;
-    background-position: -479px -241px; 
-}
 .sec02_text h1, .sec03_text h1, .sec04_text h1{
     margin-bottom: 30px; 
     font-size: 40px;
@@ -232,23 +228,16 @@ section{
     align-items: center;
 }
 .sec05_left_top, .sec05_left_mid, .sec05_left_bot{
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
    width: 100%;
    overflow: hidden;
 }
 .sec05_right_top,.sec05_right_mid, .sec05_right_bot{
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
    width: 100%;
    overflow: hidden;
 }
 .sec05_right_mid{
     text-align: left;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 .sec05_right_top img, .sec05_left_mid img, .sec05_right_bot img{
     transform: scale(1);
@@ -264,28 +253,6 @@ section{
 }
 .sec05_box p{
     padding-right: 280px; 
-}
-.sec05_box:nth-child(1)::before, .sec05_box:nth-child(3)::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 50px;
-    width: 48px;
-    height: 27px;
-    background: url('../img/ico_sprite.png') no-repeat;
-    background-position: -432px -248px; 
-    cursor: pointer;
-}
-.sec05_box:nth-child(2)::before{
-    content: "";
-    position: absolute;
-    right: 44%;
-    bottom: 40px;
-    width: 48px;
-    height: 27px;
-    background: url('../img/ico_sprite.png') no-repeat;
-    background-position: -432px -248px; 
-    cursor: pointer;
 }
 .sec06_box{
     position: relative;
@@ -304,14 +271,91 @@ section{
     font-size: 40px;
     margin-bottom: 20px; 
 }
-.sec06_txt::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -60px;
-    width: 48px;
-    height: 27px;
-    background: url('../img/ico_sprite.png') no-repeat;
-    background-position: -479px -241px; 
+.sec07{
+    width: 100%;
+    padding: 50px 100px 0;
+}
+.sec07_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec07_right{
+    width: 100%;
+    overflow: hidden;
+}
+.sec07_right img{
+    transform: scale(1);
     cursor: pointer;
+}
+.sec07_right img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.sec07_left{
+    width: 100%;
+    margin-left: 100px; 
+}
+.sec07_box h1{
+    font-size: 41px;
+    margin-bottom: 20px; 
+    padding-right: 180px; 
+}
+.sec07_box p{
+    padding-right: 280px; 
+}
+.icon_img{
+    width: 100%;
+    cursor: pointer;
+}
+.icon_bg{
+    display: inline-block;
+    width: 46px;
+    height: 20px;
+    background: url('../img/ico_sprite.png') no-repeat;
+    background-position: -482px -252px;
+    margin-top: 30px; 
+    transform: translateX(0);
+}
+.icon_img:hover .icon_bg{
+    transform: translateX(100px);
+    transition: .4s;
+}
+.icon_img span{
+    display: none;
+    width: 80px;
+    transform: translateX(0);
+    cursor: pointer;
+}
+.icon_img:hover span{
+    display: inline-block;
+    transform: translateX(-50px);
+}
+.icon_img_B{
+    width: 100%;
+    cursor: pointer;
+}
+.icon_bg_B{
+    display: inline-block;
+    width: 49px;
+    height: 20px;
+    background: url('../img/ico_sprite.png') no-repeat;
+    background-position: -432px -252px;
+    margin-top: 30px; 
+    transform: translateX(0);
+}
+.icon_img_B:hover .icon_bg_B{
+    transform: translateX(100px);
+    transition: .4s;
+}
+.icon_img_B span{
+    display: none;
+    width: 80px;
+    transform: translateX(0);
+    cursor: pointer;
+}
+.icon_img_B:hover span{
+    display: inline-block;
+    transform: translateX(-50px);
 }
