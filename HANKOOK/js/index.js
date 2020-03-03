@@ -170,6 +170,25 @@ function main(){
                         </div>  
                     </div>
                 </div>
+                <div class="sec07_box01">
+                    <div class="sec07_box01_txt">
+                        <h1>More Stories</h1>
+                        <div class="icon_img_B">
+                            <div class="icon_bg_B"></div>
+                            <span>Read more</span>
+                        </div>  
+                    </div>
+                    <div class="sec07_box01_box">
+                        <div class="img_box"></div>
+                        <div class="img_box"></div>
+                        <div class="img_box"></div>
+                        <div class="img_box"></div>
+                        <div class="img_box"></div>
+                        <div class="img_box"></div>
+                        <div class="img_box"></div>
+                        <div class="img_box"></div>
+                    </div>
+                </div>
            </div>
         </section>
     `;

@@ -196,14 +196,14 @@ section{
 }
 .sec02_text, .sec04_text{
     position: absolute;
-    left: 150px;
+    left: 200px;
     top: 150px;
     width: 480px;
     color: #fff;
 }
 .sec03_text{
     position: absolute;
-    right: 150px;
+    right: 200px;
     top: 150px;
     width: 480px;
     color: #fff;
@@ -217,7 +217,7 @@ section{
 }
 .sec05{
     width: 100%;
-    padding: 50px 100px 0;
+    padding: 50px 200px 0;
 }
 .sec05_box{
     position: relative;
@@ -263,7 +263,7 @@ section{
 }
 .sec06_txt{
     position: absolute;
-    left: 100px;
+    left: 200px;
     top: 30%;
     color: #fff;
 }
@@ -273,7 +273,7 @@ section{
 }
 .sec07{
     width: 100%;
-    padding: 50px 100px 0;
+    padding: 50px 200px 0;
 }
 .sec07_box{
     width: 100%;
@@ -300,10 +300,39 @@ section{
 .sec07_box h1{
     font-size: 41px;
     margin-bottom: 20px; 
-    padding-right: 180px; 
+    padding-right: 80px; 
 }
 .sec07_box p{
     padding-right: 280px; 
+}
+.sec07_box01{
+    margin-top: 100px; 
+}
+.sec07_box01_txt{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.sec07_box01_txt h1{
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+}
+.sec07_box01_txt .icon_img_B{
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 20%;
+}
+.sec07_box01_box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px; 
+}
+.img_box{
+    height: 300px;
+    background: pink;
 }
 .icon_img{
     width: 100%;
