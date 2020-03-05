@@ -173,24 +173,57 @@ function main(){
                 <div class="sec07_box01">
                     <div class="sec07_box01_txt">
                         <h1>More Stories</h1>
-                        <div class="icon_img_B">
-                            <div class="icon_bg_B"></div>
+                        <div class="icon_img_B_under">
                             <span>Read more</span>
+                            <div class="icon_bg_B_under"></div>
                         </div>  
                     </div>
                     <div class="sec07_box01_box">
-                        <div class="img_box"></div>
-                        <div class="img_box"></div>
-                        <div class="img_box"></div>
-                        <div class="img_box"></div>
-                        <div class="img_box"></div>
-                        <div class="img_box"></div>
-                        <div class="img_box"></div>
-                        <div class="img_box"></div>
+                        <div class="img_box">
+                            <span>세계의 하이테크 도서관 7</span>
+                        </div>
+                        <div class="img_box">
+                            <span>자동차를 구독하다 'Fair'</span>
+                        </div>
+                        <div class="img_box">
+                            <span>스몰 스페이스, 빅 아이디어
+                            'BMW'가 만든 'MINI LIVING'</span>
+                        </div>
+                        <div class="img_box">
+                            <span>"모터스포츠는 팀 스포츠다"</span>
+                        </div>
+                        <div class="img_box">
+                            <span>기하학적 아름다움이 케이크와 만날 때</span>
+                        </div>
+                        <div class="img_box">
+                            <span>영화 속 세상이 현실이 된다, 스마트 물류 시대</span>
+                        </div>
                     </div>
                 </div>
            </div>
         </section>
+        <footer>
+            <div class="fot_box">
+                <div class="fot_logo"></div>
+                <div class="txt_fot_nav">
+                    <ul class="fot_left_ul">
+                        <li class="fot_left_li">Business</li>
+                        <li class="fot_left_li">Sustainability</li>
+                        <li class="fot_left_li">Culture</li>
+                        <li class="fot_left_li">Careers</li>
+                        <li class="fot_left_li">Media</li>
+                    </ul>
+                    <ul class="fot_right_ul">
+                        <li class="fot_right_li"></li>
+                        <li class="fot_right_li">#High-tech</li>
+                        <li class="fot_right_li">#Brand/li>
+                        <li class="fot_right_li">#People & Culture</li>
+                        <li class="fot_right_li">#Mobility Culture</li>
+                        <li class="fot_right_li">#Design</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     `;
     return html;
 }
